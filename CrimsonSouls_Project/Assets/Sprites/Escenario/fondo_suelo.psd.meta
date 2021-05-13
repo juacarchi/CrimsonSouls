@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: cb988df927875294488740470b28a149
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3794938333766335804
+    second: fondo_suelo_0
+  - first:
+      213: -4358312010329293615
+    second: fondo_suelo_1
+  - first:
+      213: -6780647479478904631
+    second: fondo_suelo_2
+  - first:
+      213: -5233785420824229267
+    second: fondo_suelo_3
+  - first:
+      213: 483453392369784754
+    second: fondo_suelo_4
+  - first:
+      213: 4802265013952337517
+    second: fondo_suelo_5
+  - first:
+      213: 6388465067044899914
+    second: fondo_suelo_6
+  - first:
+      213: -7185840415877834877
+    second: fondo_suelo_7
+  - first:
+      213: 8130390491663326807
+    second: fondo_suelo_0
+  - first:
+      213: 7649735883940952007
+    second: fondo_suelo_1
+  - first:
+      213: 7032637493924946329
+    second: fondo_suelo_2
+  - first:
+      213: -7445089821026886624
+    second: fondo_suelo_3
+  - first:
+      213: -8178536367918877573
+    second: fondo_suelo_4
+  - first:
+      213: -8343913462246283379
+    second: fondo_suelo_5
+  - first:
+      213: -2482243709264310202
+    second: fondo_suelo_6
+  - first:
+      213: 7049884190356761389
+    second: fondo_suelo_7
+  - first:
+      213: 4238367174326446877
+    second: fondo_suelo_8
+  - first:
+      213: 343814512488084623
+    second: fondo_suelo_9
+  - first:
+      213: -6231302233353278831
+    second: fondo_suelo_10
+  - first:
+      213: -1459241068529929468
+    second: fondo_suelo_11
+  - first:
+      213: -4792280404119455565
+    second: fondo_suelo_12
+  - first:
+      213: -2358520534910874788
+    second: fondo_suelo_13
+  - first:
+      213: 1706997119787319426
+    second: fondo_suelo_14
+  - first:
+      213: 4209890268471228147
+    second: fondo_suelo_15
+  - first:
+      213: -4884498564583378434
+    second: fondo_suelo_16
+  - first:
+      213: 491526816762914451
+    second: fondo_suelo_17
+  - first:
+      213: 7595871946646728240
+    second: fondo_suelo_18
+  - first:
+      213: -4258013898827398954
+    second: fondo_suelo_19
+  - first:
+      213: 181361610581658067
+    second: fondo_suelo_20
+  - first:
+      213: -149172539575967151
+    second: fondo_suelo_21
+  - first:
+      213: 7864951623999848362
+    second: fondo_suelo_22
+  - first:
+      213: -119403803424333206
+    second: fondo_suelo_23
+  - first:
+      213: 3149275389452984196
+    second: fondo_suelo_24
+  - first:
+      213: -3158150459960723740
+    second: fondo_suelo_25
+  - first:
+      213: 1660381914617485378
+    second: fondo_suelo_26
+  - first:
+      213: -2723007745242535826
+    second: fondo_suelo_27
+  - first:
+      213: -8615181820221830104
+    second: fondo_suelo_28
+  - first:
+      213: 82730420753297753
+    second: fondo_suelo_29
+  - first:
+      213: -2475128881676560367
+    second: fondo_suelo_30
+  - first:
+      213: -4372402231977262342
+    second: fondo_suelo_31
+  - first:
+      213: -6905604781722396433
+    second: fondo_suelo_32
+  - first:
+      213: -8689399688164331150
+    second: fondo_suelo_33
+  - first:
+      213: -410353674347661281
+    second: fondo_suelo_34
+  - first:
+      213: 2308798019460690640
+    second: fondo_suelo_35
+  - first:
+      213: -3369910418587277466
+    second: fondo_suelo_36
+  - first:
+      213: 719852069609062934
+    second: fondo_suelo_37
+  - first:
+      213: -7697961249688704643
+    second: fondo_suelo_38
+  - first:
+      213: -8971202471376170804
+    second: fondo_suelo_39
+  - first:
+      213: -3464745989755236900
+    second: fondo_suelo_40
+  - first:
+      213: 1846581421081311667
+    second: fondo_suelo_41
+  - first:
+      213: 849010500685445892
+    second: fondo_suelo_42
+  - first:
+      213: 8830249440957089672
+    second: fondo_suelo_43
+  - first:
+      213: -6118819746909674062
+    second: fondo_suelo_44
+  - first:
+      213: 1273219114140277238
+    second: fondo_suelo_45
+  - first:
+      213: -1293061837573525363
+    second: fondo_suelo_46
+  - first:
+      213: -5041087395562971925
+    second: fondo_suelo_47
+  - first:
+      213: -1406040306522312782
+    second: fondo_suelo_48
+  - first:
+      213: -5014662128033079608
+    second: fondo_suelo_49
+  - first:
+      213: 6236562854658688210
+    second: fondo_suelo_50
+  - first:
+      213: 4185620235348356312
+    second: fondo_suelo_51
+  - first:
+      213: 2867665157293722998
+    second: fondo_suelo_52
+  - first:
+      213: -9125991745256625187
+    second: fondo_suelo_53
+  - first:
+      213: -7025467028312558348
+    second: fondo_suelo_54
+  - first:
+      213: 3546975059756676179
+    second: fondo_suelo_55
+  - first:
+      213: -6859551850260697211
+    second: fondo_suelo_56
+  - first:
+      213: -6021470576846800011
+    second: fondo_suelo_57
+  - first:
+      213: -8526801499894308221
+    second: fondo_suelo_58
+  - first:
+      213: -46953559818784514
+    second: fondo_suelo_59
+  - first:
+      213: -678306426731898726
+    second: fondo_suelo_60
+  - first:
+      213: 2807545524785104243
+    second: fondo_suelo_61
+  - first:
+      213: -7616053536060451005
+    second: fondo_suelo_62
+  - first:
+      213: 7344956832015817199
+    second: fondo_suelo_63
+  - first:
+      213: -1269803673119491705
+    second: fondo_suelo_64
+  - first:
+      213: 6629651486748791010
+    second: fondo_suelo_65
+  - first:
+      213: 2180415641858061642
+    second: fondo_suelo_66
+  - first:
+      213: 2660450373028594690
+    second: fondo_suelo_67
+  - first:
+      213: 1817317624981484182
+    second: fondo_suelo_68
+  - first:
+      213: -8353348738042061880
+    second: fondo_suelo_69
+  - first:
+      213: -2394806081674685948
+    second: fondo_suelo_70
+  - first:
+      213: 8178979699836373012
+    second: fondo_suelo_71
+  - first:
+      213: 436720371145577007
+    second: fondo_suelo_72
+  - first:
+      213: 499261079402049730
+    second: fondo_suelo_73
+  - first:
+      213: 1444417962318830363
+    second: fondo_suelo_74
+  - first:
+      213: -6589649501963786137
+    second: fondo_suelo_75
+  - first:
+      213: -6864089041753851644
+    second: fondo_suelo_76
+  - first:
+      213: -5829289757807170346
+    second: fondo_suelo_77
+  - first:
+      213: -6869891828420627079
+    second: fondo_suelo_78
+  - first:
+      213: -5772080292050714391
+    second: fondo_suelo_79
+  - first:
+      213: 6026227317647233234
+    second: fondo_suelo_80
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fondo_suelo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e5ec45313f4d070800000000000000
+      internalID: 8130390491663326807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo_suelo_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7fbd3a142592a60800000000000000
+      internalID: 7649735883940952007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo_suelo_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 62
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9916d7b4a82f89160800000000000000
+      internalID: 7032637493924946329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo_suelo_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02cd0d8e04abda890800000000000000
+      internalID: -7445089821026886624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo_suelo_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 31
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74f49f4180008e80800000000000000
+      internalID: -8178536367918877573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo_suelo_5
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 31
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87e53ef9e6743c80800000000000000
+      internalID: -8343913462246283379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo_suelo_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6405a577f7c4d8dd0800000000000000
+      internalID: -2482243709264310202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo_suelo_7
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b6bd9b15836d160800000000000000
+      internalID: 7049884190356761389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo_suelo_8
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b676d3d74b1da30800000000000000
+      internalID: 4238367174326446877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,6 @@
+La animación Jump, modificar el principio para que haga squash y quede más fluido.
+Faltan:
+- 2 ataques de cerca
+- 1 ataque de lejos
+- Dash
+- Parry (En caso de conseguirlo)
