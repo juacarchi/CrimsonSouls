@@ -17,11 +17,13 @@ public class Enemy1 : MonoBehaviour
     float timerAttack;
 
     int cur;
-    
+
     bool isPersecution;
     bool isAttacking;
     bool canAttack;
-    
+    public bool facingRight = true;//True Right, false left.
+    bool checkPosition;
+
     private void Start()
     {
         timeToAttack = Random.Range(timeToAttackMin, timeToAttackMax);
@@ -34,7 +36,7 @@ public class Enemy1 : MonoBehaviour
         isPersecution = Physics2D.OverlapCircle(transform.position, radiusPersecution, whatIsPlayer);
         isAttacking = Physics2D.OverlapCircle(transform.position, radiusAttack, whatIsPlayer);
 
-        if(isPersecution && !isAttacking)
+        if (isPersecution && !isAttacking)
         {
             Persecution();
         }
@@ -45,6 +47,7 @@ public class Enemy1 : MonoBehaviour
         if (isAttacking)
         {
             canAttack = true;
+            animEnemy1.SetTrigger("NotWalk");
         }
         if (!isAttacking)
         {
@@ -55,7 +58,6 @@ public class Enemy1 : MonoBehaviour
             Attacking();
         }
 
-
         if (Character2DController.instance.isDashing)
         {
             ccEnemy.enabled = false;
@@ -64,7 +66,7 @@ public class Enemy1 : MonoBehaviour
         {
             ccEnemy.enabled = true;
         }
-        
+        posBoca.transform.position = new Vector2(transform.position.x, posBoca.position.y);
     }
     public void Persecution()
     {
@@ -77,6 +79,7 @@ public class Enemy1 : MonoBehaviour
             if (transform.localScale.x < 0)
             {
                 Flip();
+                facingRight = true;
             }
         }
         if (posPlayer.x < transform.position.x)
@@ -84,10 +87,10 @@ public class Enemy1 : MonoBehaviour
             if (transform.localScale.x > 0)
             {
                 Flip();
+                facingRight = false;
             }
         }
-        //animEnemy1.SetBool("PosAtaque", true);
-
+        animEnemy1.SetTrigger("Walk");
     }
     public void Patrolling()
     {
@@ -96,6 +99,7 @@ public class Enemy1 : MonoBehaviour
             if (transform.localScale.x > 0)
             {
                 Flip();
+                facingRight = false;
             }
         }
         if (transform.position.x < destinos[cur].position.x)
@@ -103,6 +107,7 @@ public class Enemy1 : MonoBehaviour
             if (transform.localScale.x < 0)
             {
                 Flip();
+                facingRight = true;
             }
         }
 
@@ -120,9 +125,7 @@ public class Enemy1 : MonoBehaviour
         {
             cur = 0;
         }
-
-
-        //animEnemy1.SetBool("PosAtaque", false);
+        animEnemy1.SetTrigger("Walk");
     }
     public void Attacking()
     {
@@ -136,22 +139,44 @@ public class Enemy1 : MonoBehaviour
             canAttack = false;
         }
     }
+    public void CheckFlip()
+    {
+        Vector2 posPlayer = Character2DController.instance.transform.position;
+        if (posPlayer.x > transform.position.x)
+        {
+            if (transform.localScale.x < 0)
+            {
+                Flip();
+                facingRight = true;
+            }
+        }
+        if (posPlayer.x < transform.position.x)
+        {
+            if (transform.localScale.x > 0)
+            {
+                Flip();
+                facingRight = false;
+            }
+        }
+    }
+
     public void Flip()
     {
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
-        
+
     }
 
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radiusPersecution);
+        Gizmos.DrawWireSphere(transform.position, radiusAttack);
     }
 
     public void InstantiateLaser()
     {
         Instantiate(laser, posBoca.transform.position, Quaternion.identity);
+
     }
 }

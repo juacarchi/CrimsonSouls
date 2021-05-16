@@ -54,12 +54,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317842876097680590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.83, y: -3.3, z: 0}
+  m_LocalPosition: {x: -10.78, y: -3.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1317842876477172738}
   - {fileID: 1317842877119504496}
   - {fileID: 1317842876078481698}
+  - {fileID: 7208002363980453997}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,11 +75,11 @@ GameObject:
   - component: {fileID: 1317842876477172738}
   - component: {fileID: 1317842876477172737}
   - component: {fileID: 1317842876477172736}
-  - component: {fileID: 1317842876477172751}
   - component: {fileID: 1317842876477172750}
+  - component: {fileID: 1317842876477172751}
   m_Layer: 0
   m_Name: Graphics
-  m_TagString: Untagged
+  m_TagString: Enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,29 +169,14 @@ MonoBehaviour:
   - {fileID: 1317842876078481698}
   animEnemy1: {fileID: 1317842876477172751}
   ccEnemy: {fileID: 0}
+  laser: {fileID: 4511346760569884514, guid: 1ceafd230a0b5d84f8f54bd92167e90d, type: 3}
+  posBoca: {fileID: 7208002363980453997}
   speed: 1.2
-  radiusPersecution: 3
-  radiusAttack: 1
-  timeToAttack: 1.2
---- !u!95 &1317842876477172751
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317842876477172739}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 55ec65b7d8537fb4aaea7657d7b82302, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  radiusPersecution: 7
+  radiusAttack: 4
+  timeToAttackMin: 3
+  timeToAttackMax: 5
+  facingRight: 1
 --- !u!70 &1317842876477172750
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -204,9 +190,28 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0040335655, y: 0.6249616}
-  m_Size: {x: 0.55616283, y: 1.2499232}
+  m_Offset: {x: -0.20374298, y: -0.018547058}
+  m_Size: {x: 0.95558167, y: 1.6715326}
   m_Direction: 0
+--- !u!95 &1317842876477172751
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317842876477172739}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f02e5ae0994875b498acb617e1d166cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1317842877119504497
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,4 +241,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1317842876097680589}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7208002363980453996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7208002363980453997}
+  m_Layer: 0
+  m_Name: PosBoca
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7208002363980453997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7208002363980453996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.1, y: 0.41, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1317842876097680589}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
