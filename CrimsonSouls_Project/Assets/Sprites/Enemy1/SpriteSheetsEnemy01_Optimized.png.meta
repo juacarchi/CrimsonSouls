@@ -56,6 +56,570 @@ TextureImporter:
   - first:
       213: -8224725939899258165
     second: SpriteSheetsEnemy01_Optimized_17
+  - first:
+      213: 6449540023348904681
+    second: SpriteSheetsEnemy01_Optimized_0
+  - first:
+      213: 7154309931897790037
+    second: SpriteSheetsEnemy01_Optimized_1
+  - first:
+      213: 2258213242210265434
+    second: SpriteSheetsEnemy01_Optimized_2
+  - first:
+      213: -3161458357287919726
+    second: SpriteSheetsEnemy01_Optimized_3
+  - first:
+      213: -8517194697458990973
+    second: SpriteSheetsEnemy01_Optimized_4
+  - first:
+      213: 6267852573184808008
+    second: SpriteSheetsEnemy01_Optimized_5
+  - first:
+      213: 2864450726021992462
+    second: SpriteSheetsEnemy01_Optimized_6
+  - first:
+      213: -2643411440286675337
+    second: SpriteSheetsEnemy01_Optimized_7
+  - first:
+      213: 1806741231472556659
+    second: SpriteSheetsEnemy01_Optimized_8
+  - first:
+      213: 6736621622551033257
+    second: SpriteSheetsEnemy01_Optimized_9
+  - first:
+      213: 3292521915553650283
+    second: SpriteSheetsEnemy01_Optimized_10
+  - first:
+      213: -2097011192720033759
+    second: SpriteSheetsEnemy01_Optimized_11
+  - first:
+      213: -7999541423163367170
+    second: SpriteSheetsEnemy01_Optimized_12
+  - first:
+      213: -5197995863227210187
+    second: SpriteSheetsEnemy01_Optimized_13
+  - first:
+      213: -7711112882368772523
+    second: SpriteSheetsEnemy01_Optimized_14
+  - first:
+      213: 3249055463450071779
+    second: SpriteSheetsEnemy01_Optimized_15
+  - first:
+      213: -4908212509116117866
+    second: SpriteSheetsEnemy01_Optimized_16
+  - first:
+      213: 950668510056527557
+    second: SpriteSheetsEnemy01_Optimized_17
+  - first:
+      213: -6664455338107760691
+    second: SpriteSheetsEnemy01_Optimized_18
+  - first:
+      213: 1923029381239604294
+    second: SpriteSheetsEnemy01_Optimized_19
+  - first:
+      213: 9042673506491570378
+    second: SpriteSheetsEnemy01_Optimized_20
+  - first:
+      213: 824435661692994930
+    second: SpriteSheetsEnemy01_Optimized_21
+  - first:
+      213: 8080562081605922959
+    second: SpriteSheetsEnemy01_Optimized_22
+  - first:
+      213: 7316256088530019639
+    second: SpriteSheetsEnemy01_Optimized_23
+  - first:
+      213: 2828363229518795150
+    second: SpriteSheetsEnemy01_Optimized_24
+  - first:
+      213: 4012901052709754313
+    second: SpriteSheetsEnemy01_Optimized_25
+  - first:
+      213: -5846505891951204876
+    second: SpriteSheetsEnemy01_Optimized_26
+  - first:
+      213: -430788657145357468
+    second: SpriteSheetsEnemy01_Optimized_27
+  - first:
+      213: 9004768372023028843
+    second: SpriteSheetsEnemy01_Optimized_28
+  - first:
+      213: 625839096408660997
+    second: SpriteSheetsEnemy01_Optimized_29
+  - first:
+      213: 1756756339543157907
+    second: SpriteSheetsEnemy01_Optimized_30
+  - first:
+      213: 4089209974576108881
+    second: SpriteSheetsEnemy01_Optimized_31
+  - first:
+      213: -2877894388283972785
+    second: SpriteSheetsEnemy01_Optimized_32
+  - first:
+      213: 8316198894878052762
+    second: SpriteSheetsEnemy01_Optimized_33
+  - first:
+      213: -8918745185534512214
+    second: SpriteSheetsEnemy01_Optimized_34
+  - first:
+      213: 2918472462906871218
+    second: SpriteSheetsEnemy01_Optimized_35
+  - first:
+      213: 8185227180460093135
+    second: SpriteSheetsEnemy01_Optimized_36
+  - first:
+      213: -1301193969151150433
+    second: SpriteSheetsEnemy01_Optimized_37
+  - first:
+      213: 3538365425844035230
+    second: SpriteSheetsEnemy01_Optimized_38
+  - first:
+      213: -5072204636433207474
+    second: SpriteSheetsEnemy01_Optimized_39
+  - first:
+      213: 2249772884497809745
+    second: SpriteSheetsEnemy01_Optimized_40
+  - first:
+      213: 261198848818250698
+    second: SpriteSheetsEnemy01_Optimized_41
+  - first:
+      213: 5386238111434637455
+    second: SpriteSheetsEnemy01_Optimized_42
+  - first:
+      213: 9182955984486598639
+    second: SpriteSheetsEnemy01_Optimized_43
+  - first:
+      213: -4271129441901487747
+    second: SpriteSheetsEnemy01_Optimized_44
+  - first:
+      213: 8405288587068157136
+    second: SpriteSheetsEnemy01_Optimized_45
+  - first:
+      213: 5797782247855973158
+    second: SpriteSheetsEnemy01_Optimized_46
+  - first:
+      213: -3864620513727495737
+    second: SpriteSheetsEnemy01_Optimized_47
+  - first:
+      213: -3745753442232115485
+    second: SpriteSheetsEnemy01_Optimized_48
+  - first:
+      213: 10651132506269859
+    second: SpriteSheetsEnemy01_Optimized_49
+  - first:
+      213: -6482024776323640893
+    second: SpriteSheetsEnemy01_Optimized_50
+  - first:
+      213: 173437376468582248
+    second: SpriteSheetsEnemy01_Optimized_51
+  - first:
+      213: -6038597369126844129
+    second: SpriteSheetsEnemy01_Optimized_52
+  - first:
+      213: -5138018632568014567
+    second: SpriteSheetsEnemy01_Optimized_53
+  - first:
+      213: -7689723942362356115
+    second: SpriteSheetsEnemy01_Optimized_54
+  - first:
+      213: -1334778118924316650
+    second: SpriteSheetsEnemy01_Optimized_55
+  - first:
+      213: 5920320159034042147
+    second: SpriteSheetsEnemy01_Optimized_56
+  - first:
+      213: -4134019608759133019
+    second: SpriteSheetsEnemy01_Optimized_57
+  - first:
+      213: 4263210973473556813
+    second: SpriteSheetsEnemy01_Optimized_58
+  - first:
+      213: 3425214495931962445
+    second: SpriteSheetsEnemy01_Optimized_59
+  - first:
+      213: 7628669474696455284
+    second: SpriteSheetsEnemy01_Optimized_60
+  - first:
+      213: 5308412172565686420
+    second: SpriteSheetsEnemy01_Optimized_61
+  - first:
+      213: -2255865641991698069
+    second: SpriteSheetsEnemy01_Optimized_62
+  - first:
+      213: -1466848126569921653
+    second: SpriteSheetsEnemy01_Optimized_63
+  - first:
+      213: 8727260490849712069
+    second: SpriteSheetsEnemy01_Optimized_64
+  - first:
+      213: 7884474609511587237
+    second: SpriteSheetsEnemy01_Optimized_65
+  - first:
+      213: -1424706894465288370
+    second: SpriteSheetsEnemy01_Optimized_66
+  - first:
+      213: 4226377685703861673
+    second: SpriteSheetsEnemy01_Optimized_67
+  - first:
+      213: -3933942201508763080
+    second: SpriteSheetsEnemy01_Optimized_68
+  - first:
+      213: 7843461667382050876
+    second: SpriteSheetsEnemy01_Optimized_69
+  - first:
+      213: 2106926485670090481
+    second: SpriteSheetsEnemy01_Optimized_70
+  - first:
+      213: -6557283641127936612
+    second: SpriteSheetsEnemy01_Optimized_71
+  - first:
+      213: -3278348223198439070
+    second: SpriteSheetsEnemy01_Optimized_72
+  - first:
+      213: -3482031628050775434
+    second: SpriteSheetsEnemy01_Optimized_73
+  - first:
+      213: -360120175641258908
+    second: SpriteSheetsEnemy01_Optimized_74
+  - first:
+      213: -7848114034831258375
+    second: SpriteSheetsEnemy01_Optimized_75
+  - first:
+      213: 5977338269538806568
+    second: SpriteSheetsEnemy01_Optimized_76
+  - first:
+      213: -7810303189342823949
+    second: SpriteSheetsEnemy01_Optimized_77
+  - first:
+      213: 7644404423529212682
+    second: SpriteSheetsEnemy01_Optimized_78
+  - first:
+      213: 8188237924086241371
+    second: SpriteSheetsEnemy01_Optimized_79
+  - first:
+      213: -8135699622027053336
+    second: SpriteSheetsEnemy01_Optimized_80
+  - first:
+      213: -751724644065289953
+    second: SpriteSheetsEnemy01_Optimized_81
+  - first:
+      213: 1262490036867374200
+    second: SpriteSheetsEnemy01_Optimized_82
+  - first:
+      213: 5900089518466861991
+    second: SpriteSheetsEnemy01_Optimized_83
+  - first:
+      213: 8644730061881607024
+    second: SpriteSheetsEnemy01_Optimized_84
+  - first:
+      213: 1463134260914421
+    second: SpriteSheetsEnemy01_Optimized_85
+  - first:
+      213: 1264542569539942879
+    second: SpriteSheetsEnemy01_Optimized_86
+  - first:
+      213: 495348004540418053
+    second: SpriteSheetsEnemy01_Optimized_87
+  - first:
+      213: -7178857518398951184
+    second: SpriteSheetsEnemy01_Optimized_88
+  - first:
+      213: -2722929537776823741
+    second: SpriteSheetsEnemy01_Optimized_89
+  - first:
+      213: 7999356889514553099
+    second: SpriteSheetsEnemy01_Optimized_90
+  - first:
+      213: -6700275225517530807
+    second: SpriteSheetsEnemy01_Optimized_91
+  - first:
+      213: 3103531982408483692
+    second: SpriteSheetsEnemy01_Optimized_92
+  - first:
+      213: 5694420610316788117
+    second: SpriteSheetsEnemy01_Optimized_93
+  - first:
+      213: 5069713824469321643
+    second: SpriteSheetsEnemy01_Optimized_94
+  - first:
+      213: 8423059809856202458
+    second: SpriteSheetsEnemy01_Optimized_95
+  - first:
+      213: 1314065227143013268
+    second: SpriteSheetsEnemy01_Optimized_96
+  - first:
+      213: -2702686684676299721
+    second: SpriteSheetsEnemy01_Optimized_97
+  - first:
+      213: -3674274346962304854
+    second: SpriteSheetsEnemy01_Optimized_98
+  - first:
+      213: 990880079299234443
+    second: SpriteSheetsEnemy01_Optimized_99
+  - first:
+      213: 4687286227689244183
+    second: SpriteSheetsEnemy01_Optimized_100
+  - first:
+      213: -2301779664338440582
+    second: SpriteSheetsEnemy01_Optimized_101
+  - first:
+      213: 1042175513926880610
+    second: SpriteSheetsEnemy01_Optimized_102
+  - first:
+      213: -5079225403518342637
+    second: SpriteSheetsEnemy01_Optimized_103
+  - first:
+      213: -7485128678534211490
+    second: SpriteSheetsEnemy01_Optimized_104
+  - first:
+      213: 5573185943097216309
+    second: SpriteSheetsEnemy01_Optimized_105
+  - first:
+      213: 7292153740975254612
+    second: SpriteSheetsEnemy01_Optimized_106
+  - first:
+      213: 6608677710536035487
+    second: SpriteSheetsEnemy01_Optimized_107
+  - first:
+      213: -8801503334730540797
+    second: SpriteSheetsEnemy01_Optimized_108
+  - first:
+      213: 8853098742434870727
+    second: SpriteSheetsEnemy01_Optimized_109
+  - first:
+      213: 8081387053063497786
+    second: SpriteSheetsEnemy01_Optimized_110
+  - first:
+      213: -1820992011728381806
+    second: SpriteSheetsEnemy01_Optimized_111
+  - first:
+      213: -8740386424507672000
+    second: SpriteSheetsEnemy01_Optimized_112
+  - first:
+      213: 259548697162132189
+    second: SpriteSheetsEnemy01_Optimized_113
+  - first:
+      213: -5683706909544374873
+    second: SpriteSheetsEnemy01_Optimized_114
+  - first:
+      213: -3697085023567585650
+    second: SpriteSheetsEnemy01_Optimized_115
+  - first:
+      213: 2052475827442952077
+    second: SpriteSheetsEnemy01_Optimized_116
+  - first:
+      213: 3055900581147459954
+    second: SpriteSheetsEnemy01_Optimized_117
+  - first:
+      213: 7175992756563504392
+    second: SpriteSheetsEnemy01_Optimized_118
+  - first:
+      213: 1663309835062413486
+    second: SpriteSheetsEnemy01_Optimized_119
+  - first:
+      213: -4822715168151822509
+    second: SpriteSheetsEnemy01_Optimized_120
+  - first:
+      213: 1250231824134726566
+    second: SpriteSheetsEnemy01_Optimized_121
+  - first:
+      213: -8219252000765242875
+    second: SpriteSheetsEnemy01_Optimized_122
+  - first:
+      213: 1610487031723404666
+    second: SpriteSheetsEnemy01_Optimized_123
+  - first:
+      213: -4988435831232948335
+    second: SpriteSheetsEnemy01_Optimized_124
+  - first:
+      213: 3839154188458174579
+    second: SpriteSheetsEnemy01_Optimized_125
+  - first:
+      213: 2304744348959192904
+    second: SpriteSheetsEnemy01_Optimized_126
+  - first:
+      213: -7601384081348117053
+    second: SpriteSheetsEnemy01_Optimized_127
+  - first:
+      213: -6678567640509673040
+    second: SpriteSheetsEnemy01_Optimized_128
+  - first:
+      213: -4821014226260749804
+    second: SpriteSheetsEnemy01_Optimized_129
+  - first:
+      213: 8890470261964320650
+    second: SpriteSheetsEnemy01_Optimized_130
+  - first:
+      213: -5968366442502615337
+    second: SpriteSheetsEnemy01_Optimized_131
+  - first:
+      213: -7902356993488383261
+    second: SpriteSheetsEnemy01_Optimized_132
+  - first:
+      213: 1264922315218027819
+    second: SpriteSheetsEnemy01_Optimized_133
+  - first:
+      213: 3639946163933628631
+    second: SpriteSheetsEnemy01_Optimized_134
+  - first:
+      213: -6719244866918143494
+    second: SpriteSheetsEnemy01_Optimized_135
+  - first:
+      213: -7232342997418410401
+    second: SpriteSheetsEnemy01_Optimized_136
+  - first:
+      213: -3281612770389389579
+    second: SpriteSheetsEnemy01_Optimized_137
+  - first:
+      213: 7912459894088195184
+    second: SpriteSheetsEnemy01_Optimized_138
+  - first:
+      213: 5773054857079536646
+    second: SpriteSheetsEnemy01_Optimized_139
+  - first:
+      213: 7436490925864211360
+    second: SpriteSheetsEnemy01_Optimized_140
+  - first:
+      213: 855912123306577456
+    second: SpriteSheetsEnemy01_Optimized_141
+  - first:
+      213: 3601549824921855385
+    second: SpriteSheetsEnemy01_Optimized_142
+  - first:
+      213: 1966476980187907195
+    second: SpriteSheetsEnemy01_Optimized_143
+  - first:
+      213: -199825032921975585
+    second: SpriteSheetsEnemy01_Optimized_144
+  - first:
+      213: 8121644393479556359
+    second: SpriteSheetsEnemy01_Optimized_145
+  - first:
+      213: 3731295554367114594
+    second: SpriteSheetsEnemy01_Optimized_146
+  - first:
+      213: -2570203037806616052
+    second: SpriteSheetsEnemy01_Optimized_147
+  - first:
+      213: -4625709946786291236
+    second: SpriteSheetsEnemy01_Optimized_148
+  - first:
+      213: 1428578666947584625
+    second: SpriteSheetsEnemy01_Optimized_149
+  - first:
+      213: 3591877742899306855
+    second: SpriteSheetsEnemy01_Optimized_150
+  - first:
+      213: 4968265734490711848
+    second: SpriteSheetsEnemy01_Optimized_151
+  - first:
+      213: -3619331940245466621
+    second: SpriteSheetsEnemy01_Optimized_152
+  - first:
+      213: -8281765157854661039
+    second: SpriteSheetsEnemy01_Optimized_153
+  - first:
+      213: -1490657851497023572
+    second: SpriteSheetsEnemy01_Optimized_154
+  - first:
+      213: 4993471620261539419
+    second: SpriteSheetsEnemy01_Optimized_155
+  - first:
+      213: 1875578648968722455
+    second: SpriteSheetsEnemy01_Optimized_156
+  - first:
+      213: -2539662337236528040
+    second: SpriteSheetsEnemy01_Optimized_157
+  - first:
+      213: 8853533435794752442
+    second: SpriteSheetsEnemy01_Optimized_158
+  - first:
+      213: -745275238016351720
+    second: SpriteSheetsEnemy01_Optimized_159
+  - first:
+      213: -2687956521530547326
+    second: SpriteSheetsEnemy01_Optimized_160
+  - first:
+      213: 1357572324254436535
+    second: SpriteSheetsEnemy01_Optimized_161
+  - first:
+      213: 5858069366266035044
+    second: SpriteSheetsEnemy01_Optimized_162
+  - first:
+      213: 2639428359649495024
+    second: SpriteSheetsEnemy01_Optimized_163
+  - first:
+      213: -9204287282463194418
+    second: SpriteSheetsEnemy01_Optimized_164
+  - first:
+      213: -7709123233983559894
+    second: SpriteSheetsEnemy01_Optimized_165
+  - first:
+      213: -8852254071789168954
+    second: SpriteSheetsEnemy01_Optimized_166
+  - first:
+      213: 1266661174824098671
+    second: SpriteSheetsEnemy01_Optimized_167
+  - first:
+      213: 5190950359513051888
+    second: SpriteSheetsEnemy01_Optimized_168
+  - first:
+      213: 6276249480558551184
+    second: SpriteSheetsEnemy01_Optimized_169
+  - first:
+      213: -345465619057047538
+    second: SpriteSheetsEnemy01_Optimized_170
+  - first:
+      213: 3438883996686293387
+    second: SpriteSheetsEnemy01_Optimized_171
+  - first:
+      213: -4477852326500811115
+    second: SpriteSheetsEnemy01_Optimized_172
+  - first:
+      213: -2035036789810381850
+    second: SpriteSheetsEnemy01_Optimized_173
+  - first:
+      213: 7487613306657348985
+    second: SpriteSheetsEnemy01_Optimized_174
+  - first:
+      213: -424413997106493469
+    second: SpriteSheetsEnemy01_Optimized_175
+  - first:
+      213: -7835714120112038095
+    second: SpriteSheetsEnemy01_Optimized_176
+  - first:
+      213: 1180208831697356352
+    second: SpriteSheetsEnemy01_Optimized_177
+  - first:
+      213: 4549055523538092390
+    second: SpriteSheetsEnemy01_Optimized_178
+  - first:
+      213: -849535244570899651
+    second: SpriteSheetsEnemy01_Optimized_179
+  - first:
+      213: -685731248075198843
+    second: SpriteSheetsEnemy01_Optimized_180
+  - first:
+      213: -2420224411006043306
+    second: SpriteSheetsEnemy01_Optimized_181
+  - first:
+      213: 7532890586190650563
+    second: SpriteSheetsEnemy01_Optimized_182
+  - first:
+      213: 1923419033155118666
+    second: SpriteSheetsEnemy01_Optimized_183
+  - first:
+      213: 5853619647788555778
+    second: SpriteSheetsEnemy01_Optimized_184
+  - first:
+      213: 8443162218097392086
+    second: SpriteSheetsEnemy01_Optimized_185
+  - first:
+      213: -8541711919224518532
+    second: SpriteSheetsEnemy01_Optimized_186
+  - first:
+      213: -2823498989842567356
+    second: SpriteSheetsEnemy01_Optimized_187
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,7 +663,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -160,15 +724,15 @@ TextureImporter:
         y: 685
         width: 174
         height: 199
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5206565, y: 0.4754881}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1977cdd3924ab7f0800000000000000
-      internalID: -596090797824706276
+      spriteID: 9e24068ea7e518950800000000000000
+      internalID: 6449540023348904681
       vertices: []
       indices: 
       edges: []
@@ -181,15 +745,15 @@ TextureImporter:
         y: 687
         width: 168
         height: 195
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.54399365, y: 0.48014605}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5821f4622f1a66470800000000000000
-      internalID: 8387569417421001349
+      spriteID: 55e11d75af6394360800000000000000
+      internalID: 7154309931897790037
       vertices: []
       indices: 
       edges: []
@@ -202,15 +766,15 @@ TextureImporter:
         y: 683
         width: 174
         height: 201
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.52022684, y: 0.48424077}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4981e1672de917b40800000000000000
-      internalID: 5436300851974903956
+      spriteID: a59a601baf8c65f10800000000000000
+      internalID: 2258213242210265434
       vertices: []
       indices: 
       edges: []
@@ -223,15 +787,15 @@ TextureImporter:
         y: 685
         width: 177
         height: 201
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.51163083, y: 0.47951525}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64aa604d1fd1e1260800000000000000
-      internalID: 7070121389499787846
+      spriteID: 29fd9a9cf5e3024d0800000000000000
+      internalID: -3161458357287919726
       vertices: []
       indices: 
       edges: []
@@ -244,15 +808,15 @@ TextureImporter:
         y: 682
         width: 153
         height: 214
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5837227, y: 0.46151963}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87e19669606436a30800000000000000
-      internalID: 4207283471001394808
+      spriteID: 380cd177c88dcc980800000000000000
+      internalID: -8517194697458990973
       vertices: []
       indices: 
       edges: []
@@ -265,15 +829,15 @@ TextureImporter:
         y: 690
         width: 192
         height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.46306738, y: 0.6153014}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65bac01a33f210270800000000000000
-      internalID: 8214899094092294998
+      spriteID: 844d231f4b2ebf650800000000000000
+      internalID: 6267852573184808008
       vertices: []
       indices: 
       edges: []
@@ -286,15 +850,15 @@ TextureImporter:
         y: 462
         width: 189
         height: 181
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5775884, y: 0.5082394}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32c4f2bc1ecfd13a0800000000000000
-      internalID: -6692915424495973341
+      spriteID: e00962142c290c720800000000000000
+      internalID: 2864450726021992462
       vertices: []
       indices: 
       edges: []
@@ -307,15 +871,15 @@ TextureImporter:
         y: 462
         width: 189
         height: 181
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.57463795, y: 0.51492393}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8267cc6d7a569bb20800000000000000
-      internalID: 3150661185860040232
+      spriteID: 77e428aec47b05bd0800000000000000
+      internalID: -2643411440286675337
       vertices: []
       indices: 
       edges: []
@@ -328,15 +892,15 @@ TextureImporter:
         y: 462
         width: 165
         height: 208
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.53092337, y: 0.46103933}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cf091d643504d860800000000000000
-      internalID: 7553668197733961667
+      spriteID: 37a39f6d395d21910800000000000000
+      internalID: 1806741231472556659
       vertices: []
       indices: 
       edges: []
@@ -349,15 +913,15 @@ TextureImporter:
         y: 460
         width: 165
         height: 207
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.53456146, y: 0.4623012}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccc5964a010e92960800000000000000
-      internalID: 7577834210110037196
+      spriteID: 9a5be5e6ca94d7d50800000000000000
+      internalID: 6736621622551033257
       vertices: []
       indices: 
       edges: []
@@ -370,15 +934,15 @@ TextureImporter:
         y: 236
         width: 168
         height: 208
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5389253, y: 0.4505944}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 297377f9d7006ba40800000000000000
-      internalID: 5383490944114309010
+      spriteID: b6693c7dc3361bd20800000000000000
+      internalID: 3292521915553650283
       vertices: []
       indices: 
       edges: []
@@ -391,15 +955,15 @@ TextureImporter:
         y: 237
         width: 163
         height: 205
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5020299, y: 0.44350317}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0311d5195ebf339a0800000000000000
-      internalID: -6254378494082608848
+      spriteID: 12877ef3e6be5e2e0800000000000000
+      internalID: -2097011192720033759
       vertices: []
       indices: 
       edges: []
@@ -412,15 +976,15 @@ TextureImporter:
         y: 239
         width: 148
         height: 205
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5196562, y: 0.44323716}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1024b94880cb95920800000000000000
-      internalID: 2979619373252821505
+      spriteID: ef02352857bebf090800000000000000
+      internalID: -7999541423163367170
       vertices: []
       indices: 
       edges: []
@@ -433,15 +997,15 @@ TextureImporter:
         y: 241
         width: 120
         height: 203
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5484848, y: 0.460591}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26ced7fc1e3075560800000000000000
-      internalID: 7302309589188209762
+      spriteID: 53664647d420dd7b0800000000000000
+      internalID: -5197995863227210187
       vertices: []
       indices: 
       edges: []
@@ -454,15 +1018,15 @@ TextureImporter:
         y: 10
         width: 168
         height: 208
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.54229856, y: 0.45591715}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb19bc8f3f0bddcb0800000000000000
-      internalID: -4837515862828412485
+      spriteID: 556887f40bf9cf490800000000000000
+      internalID: -7711112882368772523
       vertices: []
       indices: 
       edges: []
@@ -475,15 +1039,15 @@ TextureImporter:
         y: 11
         width: 163
         height: 205
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49660376, y: 0.44733778}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec590d2ca77eb1bf0800000000000000
-      internalID: -352433631377975858
+      spriteID: 3e2db72dab6f61d20800000000000000
+      internalID: 3249055463450071779
       vertices: []
       indices: 
       edges: []
@@ -496,15 +1060,15 @@ TextureImporter:
         y: 13
         width: 148
         height: 205
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5180689, y: 0.4445589}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d9eef839bd1a3370800000000000000
-      internalID: 8302981544373316051
+      spriteID: 69c41005ab682ebb0800000000000000
+      internalID: -4908212509116117866
       vertices: []
       indices: 
       edges: []
@@ -517,15 +1081,15 @@ TextureImporter:
         y: 15
         width: 120
         height: 203
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.54468334, y: 0.45437562}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bca2d598557ebdd80800000000000000
-      internalID: -8224725939899258165
+      spriteID: 5c6b11919f3713d00800000000000000
+      internalID: 950668510056527557
       vertices: []
       indices: 
       edges: []

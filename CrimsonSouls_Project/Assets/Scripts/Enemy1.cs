@@ -6,12 +6,14 @@ public class Enemy1 : MonoBehaviour
     public Transform[] destinos;
     public Animator animEnemy1;
     public CapsuleCollider2D ccEnemy;
+    public GameObject laser;
+    public Transform posBoca;
 
     public float speed;
     public float radiusPersecution;
     public float radiusAttack;
-    public float timeToAttack;
-
+    float timeToAttack;
+    public float timeToAttackMin, timeToAttackMax;
     float timerAttack;
 
     int cur;
@@ -19,9 +21,10 @@ public class Enemy1 : MonoBehaviour
     bool isPersecution;
     bool isAttacking;
     bool canAttack;
-
+    
     private void Start()
     {
+        timeToAttack = Random.Range(timeToAttackMin, timeToAttackMax);
         timerAttack = timeToAttack;
         ccEnemy = GetComponent<CapsuleCollider2D>();
     }
@@ -83,7 +86,7 @@ public class Enemy1 : MonoBehaviour
                 Flip();
             }
         }
-        animEnemy1.SetBool("PosAtaque", true);
+        //animEnemy1.SetBool("PosAtaque", true);
 
     }
     public void Patrolling()
@@ -119,7 +122,7 @@ public class Enemy1 : MonoBehaviour
         }
 
 
-        animEnemy1.SetBool("PosAtaque", false);
+        //animEnemy1.SetBool("PosAtaque", false);
     }
     public void Attacking()
     {
@@ -127,6 +130,7 @@ public class Enemy1 : MonoBehaviour
         if (timerAttack <= 0)
         {
             Debug.Log("Ataca");
+            timeToAttack = Random.Range(timeToAttackMin, timeToAttackMax);
             animEnemy1.SetTrigger("Attack_01");
             timerAttack = timeToAttack;
             canAttack = false;
@@ -146,4 +150,8 @@ public class Enemy1 : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, radiusPersecution);
     }
 
+    public void InstantiateLaser()
+    {
+        Instantiate(laser, posBoca.transform.position, Quaternion.identity);
+    }
 }
