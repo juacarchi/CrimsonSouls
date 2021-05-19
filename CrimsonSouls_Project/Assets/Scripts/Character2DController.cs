@@ -83,6 +83,7 @@ public class Character2DController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 isDashing = true;
+                anim.SetTrigger("Dash");
             }
         }
         if (isJumping)
@@ -241,10 +242,12 @@ public class Character2DController : MonoBehaviour
         if (facingRight)
         {
             rb2D.velocity = Vector2.right * dashSpeed;
+            //anim.SetTrigger("Dash");
         }
         else
         {
             rb2D.velocity = Vector2.left * dashSpeed;
+            //anim.SetTrigger("Dash");
         }
 
         if (dashTime <= 0)
