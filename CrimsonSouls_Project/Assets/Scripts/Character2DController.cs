@@ -137,7 +137,7 @@ public class Character2DController : MonoBehaviour
             Jump();
         }
 
-        //ATAQUE 1
+        //ATAQUE CERCA
         if (Input.GetButtonDown("Fire1"))
         {
             if (jumps == 0)//DOBLE SALTO
@@ -160,7 +160,7 @@ public class Character2DController : MonoBehaviour
                 }
                 else if(attacks > 2)
                 {
-                    anim.SetTrigger("Attack_02");
+                    anim.SetTrigger("Attack_03");
                     Debug.Log("Ataque3");
                     attacks = 0;
                     isCombo = false;
