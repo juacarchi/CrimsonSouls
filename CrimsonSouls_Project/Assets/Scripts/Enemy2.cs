@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy2 : MonoBehaviour
 {
@@ -11,6 +9,7 @@ public class Enemy2 : MonoBehaviour
     public Animator animEnemy2;
     public CapsuleCollider2D cc2D;
 
+    public float speed;
     public float originRadius;
     public float radiusPersecution;
     public float radiusAttack;
@@ -25,7 +24,7 @@ public class Enemy2 : MonoBehaviour
     bool isCollisionLeft;
     bool isAttackRange;
     bool facingRight;
-    bool isOutOfRange;
+    bool isInRange;
     private void Start()
     {
         timeToAttack = Random.Range(timeToAttackMin, timeToAttackMax);
@@ -35,34 +34,21 @@ public class Enemy2 : MonoBehaviour
     }
     private void Update()
     {
-        isOutOfRange = Physics2D.OverlapCircle(originPoint.transform.position, originRadius, whatIsEnemy);
+        isInRange = Physics2D.OverlapCircle(originPoint.transform.position, originRadius, whatIsEnemy);
         isPersecution = Physics2D.OverlapCircle(transform.position, radiusPersecution, whatIsPlayer);
         isAttackRange = Physics2D.OverlapCircle(transform.position, radiusAttack, whatIsPlayer);
 
         isCollisionRight = Physics2D.OverlapCircle(new Vector2(transform.position.x + 1, transform.position.y), radiusDefend, whatIsPlayerAttack);
         isCollisionLeft = Physics2D.OverlapCircle(new Vector2(transform.position.x - 1, transform.position.y), radiusDefend, whatIsPlayerAttack);
-        Collider2D colliderLeft = Physics2D.OverlapCircle(new Vector2(transform.position.x - 1, transform.position.y), radiusDefend, whatIsPlayerAttack);
 
-
-        if (isPersecution && !isAttackRange)
+        if (isInRange)
         {
-            if (isOutOfRange)
+            if (isPersecution && !isAttackRange)
             {
-                BackStart();
+              
+                    Persecution();
             }
-            else
-            {
-                Persecution();
-            }
-            
-        }
-        if(isPersecution && isAttackRange)
-        {
-            if (isOutOfRange)
-            {
-                BackStart();
-            }
-            else
+            if(isPersecution && isAttackRange)
             {
                 timerAttack -= Time.deltaTime;
                 if (timerAttack <= 0)
@@ -72,42 +58,84 @@ public class Enemy2 : MonoBehaviour
                 }
             }
         }
-        if(isCollisionRight && facingRight)
+        else
+        {
+            BackStart();
+        }
+        
+       
+        if (isCollisionRight && facingRight)
         {
             Debug.Log("Se defiende por la derecha");
-            //colliderRight.enabled = false;
+            animEnemy2.SetTrigger("Defend");
+            animEnemy2.SetBool("Walk", false);
+
         }
-        if(isCollisionLeft && !facingRight)
+        if (isCollisionLeft && !facingRight)
         {
             Debug.Log("Se defiende por la izquierda");
-            //colliderLeft.enabled = false;
-            Debug.Log(colliderLeft.name);
+            animEnemy2.SetTrigger("Defend");
+            animEnemy2.SetBool("Walk", false);
         }
-
-
-
+        //DefendAttack();
+        
     }
-    //void OnDrawGizmosSelected()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawWireCube(new Vector2(transform.position.x - 1, transform.position.y), new Vector2(1, cc2D.size.y));
-    //}
+
     public void Persecution()
     {
         Debug.Log("Persecution");
+        Vector2 posPlayer = Character2DController.instance.transform.position;
+        float step = speed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(posPlayer.x, transform.position.y), step);
+
+        if (posPlayer.x > transform.position.x)
+        {
+            if (transform.localScale.x < 0)
+            {
+                Flip();
+                facingRight = true;
+            }
+        }
+        if (posPlayer.x < transform.position.x)
+        {
+            if (transform.localScale.x > 0)
+            {
+                Flip();
+                facingRight = false;
+            }
+        }
+        animEnemy2.SetBool("Walk", true);
     }
     public void BackStart()
     {
         Debug.Log("BackStart");
+        float step = speed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(originPoint.transform.position.x, transform.position.y), step);
+        if (originPoint.transform.position.x > transform.position.x)
+        {
+            if (transform.localScale.x < 0)
+            {
+                Flip();
+                facingRight = true;
+            }
+        }
+        if (originPoint.transform.position.x < transform.position.x)
+        {
+            if (transform.localScale.x > 0)
+            {
+                Flip();
+                facingRight = false;
+            }
+        }
+        animEnemy2.SetBool("Walk", true);
     }
     public void Attack()
     {
         Debug.Log("Attack");
+        animEnemy2.SetTrigger("Attack");
+        animEnemy2.SetBool("Walk", false);
     }
-    public void DefendAttack()
-    {
-        Debug.Log("DefendAttack");
-    }
+    
 
     public void Flip()
     {

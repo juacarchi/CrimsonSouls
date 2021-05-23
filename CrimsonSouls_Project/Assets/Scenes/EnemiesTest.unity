@@ -2232,7 +2232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852859313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.78, y: -3.57, z: 0}
+  m_LocalPosition: {x: -12.71, y: -3.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2111810072}
@@ -2252,7 +2252,7 @@ GameObject:
   - component: {fileID: 2111810074}
   - component: {fileID: 2111810073}
   - component: {fileID: 2111810076}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Graphics
   m_TagString: Enemy2
   m_Icon: {fileID: 0}
@@ -2383,9 +2383,10 @@ MonoBehaviour:
   originPoint: {fileID: 1852859314}
   animEnemy2: {fileID: 2111810073}
   cc2D: {fileID: 2111810074}
+  speed: 2
   originRadius: 6
   radiusPersecution: 3
   radiusAttack: 1.5
-  radiusDefend: 2
+  radiusDefend: 1
   timeToAttackMin: 1
   timeToAttackMax: 3
