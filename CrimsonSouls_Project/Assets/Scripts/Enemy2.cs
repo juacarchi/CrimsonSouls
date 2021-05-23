@@ -34,7 +34,7 @@ public class Enemy2 : MonoBehaviour
     }
     private void Update()
     {
-        isInRange = Physics2D.OverlapCircle(originPoint.transform.position, originRadius, whatIsEnemy);
+        isInRange = Physics2D.OverlapCircle(originPoint.transform.position, originRadius, whatIsPlayer);
         isPersecution = Physics2D.OverlapCircle(transform.position, radiusPersecution, whatIsPlayer);
         isAttackRange = Physics2D.OverlapCircle(transform.position, radiusAttack, whatIsPlayer);
 
@@ -87,23 +87,7 @@ public class Enemy2 : MonoBehaviour
         Vector2 posPlayer = Character2DController.instance.transform.position;
         float step = speed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(posPlayer.x, transform.position.y), step);
-
-        if (posPlayer.x > transform.position.x)
-        {
-            if (transform.localScale.x < 0)
-            {
-                Flip();
-                facingRight = true;
-            }
-        }
-        if (posPlayer.x < transform.position.x)
-        {
-            if (transform.localScale.x > 0)
-            {
-                Flip();
-                facingRight = false;
-            }
-        }
+        CheckFlip();
         animEnemy2.SetBool("Walk", true);
     }
     public void BackStart()
