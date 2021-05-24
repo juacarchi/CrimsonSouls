@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Enemy1 : MonoBehaviour
 {
@@ -8,7 +10,9 @@ public class Enemy1 : MonoBehaviour
     public CapsuleCollider2D ccEnemy;
     public GameObject laser;
     public Transform posBoca;
+    
 
+    public int health;
     public float speed;
     public float radiusPersecution;
     public float radiusAttack;
@@ -179,4 +183,16 @@ public class Enemy1 : MonoBehaviour
         Instantiate(laser, posBoca.transform.position, Quaternion.identity);
 
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("PlayerAttack"))
+        {
+            Debug.Log("Quita vida");
+            animEnemy1.SetTrigger("Hit");
+            timerAttack = Random.Range(timeToAttackMin, timeToAttackMax);
+            health -= GameManager.instance.GetDamageMeleeAttack();
+        }
+    }
+    
+
 }

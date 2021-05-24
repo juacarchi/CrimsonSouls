@@ -49,6 +49,7 @@ public class Character2DController : MonoBehaviour
     bool isJumping;
     bool isCrouch;
     
+    
 
 
     private void Awake()
@@ -130,11 +131,14 @@ public class Character2DController : MonoBehaviour
             }
         }
 
+
+
         if (Input.GetButtonDown("Jump") && jumps > 0)
         {
             isGrounded = false;
             isJumping = true;
             Jump();
+            
         }
 
         //ATAQUE CERCA
@@ -146,26 +150,30 @@ public class Character2DController : MonoBehaviour
             }
             else
             {
-                attacks++;
-                if (attacks == 1)
+                if (isGrounded)
                 {
-                    isCombo = true;
-                    anim.SetTrigger("Attack_01");
-                    Debug.Log("Ataque1");
+                    attacks++;
+                    if (attacks == 1)
+                    {
+                        isCombo = true;
+                        anim.SetTrigger("Attack_01");
+                        Debug.Log("Ataque1");
+                    }
+                    else if (attacks == 2)
+                    {
+                        anim.SetTrigger("Attack_02");
+                        Debug.Log("Ataque2");
+                    }
+                    else if (attacks > 2)
+                    {
+                        anim.SetTrigger("Attack_03");
+                        Debug.Log("Ataque3");
+                        attacks = 0;
+                        isCombo = false;
+                        timerToCombo = timeToCombo;
+                    }
                 }
-                else if(attacks == 2)
-                {
-                    anim.SetTrigger("Attack_02");
-                    Debug.Log("Ataque2");
-                }
-                else if(attacks > 2)
-                {
-                    anim.SetTrigger("Attack_03");
-                    Debug.Log("Ataque3");
-                    attacks = 0;
-                    isCombo = false;
-                    timerToCombo = timeToCombo;
-                }
+       
             }
         }
         if (Input.GetButtonDown("Fire2")&&canShoot)
@@ -191,6 +199,11 @@ public class Character2DController : MonoBehaviour
         {
             realCollider2D = animCollider;
         }
+        if (isGrounded)
+        {
+            anim.SetBool("isGrounded", true);
+        }
+        else { anim.SetBool("isGrounded", false); }
     }
 
     private void FixedUpdate()

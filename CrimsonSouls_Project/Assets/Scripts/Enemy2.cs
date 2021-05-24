@@ -18,6 +18,7 @@ public class Enemy2 : MonoBehaviour
     float timerAttack;
     public float timeToAttackMin, timeToAttackMax;
 
+    public int health = 560;
     bool checkPosition;
     bool isPersecution;
     bool isCollisionRight;
@@ -38,17 +39,16 @@ public class Enemy2 : MonoBehaviour
         isPersecution = Physics2D.OverlapCircle(transform.position, radiusPersecution, whatIsPlayer);
         isAttackRange = Physics2D.OverlapCircle(transform.position, radiusAttack, whatIsPlayer);
 
-        isCollisionRight = Physics2D.OverlapCircle(new Vector2(transform.position.x + 1, transform.position.y), radiusDefend, whatIsPlayerAttack);
-        isCollisionLeft = Physics2D.OverlapCircle(new Vector2(transform.position.x - 1, transform.position.y), radiusDefend, whatIsPlayerAttack);
+      
 
         if (isInRange)
         {
             if (isPersecution && !isAttackRange)
             {
-              
-                    Persecution();
+
+                Persecution();
             }
-            if(isPersecution && isAttackRange)
+            if (isPersecution && isAttackRange)
             {
                 timerAttack -= Time.deltaTime;
                 if (timerAttack <= 0)
@@ -62,25 +62,31 @@ public class Enemy2 : MonoBehaviour
         {
             BackStart();
         }
-        
-       
+
+        if (health <= 0)
+        {
+            Debug.Log("Muerto");
+            Destroy(this.gameObject, 1f);
+        }
+    }
+    private void FixedUpdate()
+    {
+        isCollisionRight = Physics2D.OverlapCircle(new Vector2(transform.position.x + 1.5f, transform.position.y), radiusDefend, whatIsPlayerAttack);
+        isCollisionLeft = Physics2D.OverlapCircle(new Vector2(transform.position.x - 1.5f, transform.position.y), radiusDefend, whatIsPlayerAttack);
+
         if (isCollisionRight && facingRight)
         {
-            Debug.Log("Se defiende por la derecha");
+            cc2D.enabled = false;
             animEnemy2.SetTrigger("Defend");
             animEnemy2.SetBool("Walk", false);
-
         }
         if (isCollisionLeft && !facingRight)
         {
-            Debug.Log("Se defiende por la izquierda");
+            cc2D.enabled = false;
             animEnemy2.SetTrigger("Defend");
             animEnemy2.SetBool("Walk", false);
         }
-        //DefendAttack();
-        
     }
-
     public void Persecution()
     {
         Debug.Log("Persecution");
@@ -119,7 +125,7 @@ public class Enemy2 : MonoBehaviour
         animEnemy2.SetTrigger("Attack");
         animEnemy2.SetBool("Walk", false);
     }
-    
+
 
     public void Flip()
     {
@@ -146,6 +152,16 @@ public class Enemy2 : MonoBehaviour
                 Flip();
                 facingRight = false;
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("PlayerAttack"))
+        {
+            Debug.Log("Quita vida");
+            animEnemy2.SetTrigger("Hit");
+            timerAttack = Random.Range(timeToAttackMin, timeToAttackMax);
+            health -= GameManager.instance.GetDamageMeleeAttack();
         }
     }
 }

@@ -1109,7 +1109,7 @@ Rigidbody2D:
   m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: e53bf8507d015af4faad36d85f643b4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   timeToDash: 0.2
   timeToCombo: 1.2
   startDashTime: 0.2
-  gravity: -10
+  gravity: -5
   checkRadius: 0.5
   checkClimb: 0.5
   climbJumpsLimit: 1
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   isSecondJump: 0
   facingRight: 1
   isDashing: 0
---- !u!1 &684644694
+--- !u!1 &594198070
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1165,43 +1165,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 684644695}
-  - component: {fileID: 684644696}
+  - component: {fileID: 594198071}
+  - component: {fileID: 594198072}
   m_Layer: 12
   m_Name: Arma
-  m_TagString: Untagged
+  m_TagString: PlayerAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &684644695
+--- !u!4 &594198071
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684644694}
+  m_GameObject: {fileID: 594198070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1223818190}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &684644696
+--- !u!61 &594198072
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684644694}
+  m_GameObject: {fileID: 594198070}
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.089696646, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1212,7 +1212,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9926419, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &702605286
 GameObject:
@@ -1911,7 +1911,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 684644695}
+  - {fileID: 594198071}
   m_Father: {fileID: 578301607}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2310,6 +2310,7 @@ GameObject:
   - component: {fileID: 2111810074}
   - component: {fileID: 2111810073}
   - component: {fileID: 2111810076}
+  - component: {fileID: 2111810077}
   m_Layer: 11
   m_Name: Graphics
   m_TagString: Enemy2
@@ -2448,3 +2449,25 @@ MonoBehaviour:
   radiusDefend: 1
   timeToAttackMin: 1
   timeToAttackMax: 2
+  health: 560
+--- !u!50 &2111810077
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111810071}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

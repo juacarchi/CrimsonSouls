@@ -8,6 +8,7 @@ TagManager:
   - Laser
   - Enemy1
   - Enemy2
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX
