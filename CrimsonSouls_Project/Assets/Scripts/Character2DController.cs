@@ -25,8 +25,10 @@ public class Character2DController : MonoBehaviour
     public float gravity = -10;
     public float checkRadius;
     public float checkClimb;
+    public float timeBetweenAttack;
 
     float timerBettweenShoot;
+    float timerBetweenAttack;
     float dashTime;
     float timerJumping = 0.2f;
     float timerToDash;
@@ -48,7 +50,7 @@ public class Character2DController : MonoBehaviour
     bool isClimbing;
     bool isJumping;
     bool isCrouch;
-    
+    bool canAttack;
     
 
 
@@ -62,7 +64,8 @@ public class Character2DController : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
+        canAttack = true;
+        timerBetweenAttack = timeBetweenAttack;
     }
     void Start()
     {
@@ -78,6 +81,7 @@ public class Character2DController : MonoBehaviour
 
     void Update()
     {
+        
         timerToDash -= Time.deltaTime;
         if (timerToDash <= 0)
         {
@@ -142,7 +146,7 @@ public class Character2DController : MonoBehaviour
         }
 
         //ATAQUE CERCA
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canAttack)
         {
             if (jumps == 0)//DOBLE SALTO
             {
@@ -156,16 +160,19 @@ public class Character2DController : MonoBehaviour
                     if (attacks == 1)
                     {
                         isCombo = true;
+                        canAttack = false;
                         anim.SetTrigger("Attack_01");
                         Debug.Log("Ataque1");
                     }
                     else if (attacks == 2)
                     {
+                        canAttack = false;
                         anim.SetTrigger("Attack_02");
                         Debug.Log("Ataque2");
                     }
                     else if (attacks > 2)
                     {
+                        canAttack = false;
                         anim.SetTrigger("Attack_03");
                         Debug.Log("Ataque3");
                         attacks = 0;
@@ -174,6 +181,15 @@ public class Character2DController : MonoBehaviour
                     }
                 }
        
+            }
+        }
+        if (!canAttack)
+        {
+            timerBetweenAttack -= Time.deltaTime;
+            if (timerBetweenAttack <= 0)
+            {
+                canAttack = true;
+                timerBetweenAttack = timeBetweenAttack;
             }
         }
         if (Input.GetButtonDown("Fire2")&&canShoot)

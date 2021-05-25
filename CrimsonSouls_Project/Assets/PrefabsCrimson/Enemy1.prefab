@@ -171,11 +171,12 @@ MonoBehaviour:
   ccEnemy: {fileID: 0}
   laser: {fileID: 4511346760569884514, guid: 1ceafd230a0b5d84f8f54bd92167e90d, type: 3}
   posBoca: {fileID: 7208002363980453997}
+  health: 0
   speed: 1.2
   radiusPersecution: 7
   radiusAttack: 4
-  timeToAttackMin: 3
-  timeToAttackMax: 5
+  timeToAttackMin: 1
+  timeToAttackMax: 3
   facingRight: 1
 --- !u!70 &1317842876477172750
 CapsuleCollider2D:

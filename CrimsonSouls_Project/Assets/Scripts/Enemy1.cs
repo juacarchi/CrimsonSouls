@@ -141,8 +141,10 @@ public class Enemy1 : MonoBehaviour
             animEnemy1.SetTrigger("Attack_01");
             timerAttack = timeToAttack;
             canAttack = false;
+            
         }
     }
+    
     public void CheckFlip()
     {
         Vector2 posPlayer = Character2DController.instance.transform.position;
@@ -188,11 +190,27 @@ public class Enemy1 : MonoBehaviour
         if (other.CompareTag("PlayerAttack"))
         {
             Debug.Log("Quita vida");
-            animEnemy1.SetTrigger("Hit");
-            timerAttack = Random.Range(timeToAttackMin, timeToAttackMax);
+            animEnemy1.SetBool("Hit", true);
             health -= GameManager.instance.GetDamageMeleeAttack();
         }
     }
-    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("PlayerAttack"))
+        {
+            
+            animEnemy1.SetBool("Hit", false);
+            
+        }
+    }
+    public void DesactiveCollider()
+    {
+        ccEnemy.enabled = false;
+        animEnemy1.SetBool("Hit", false);
+    }
+    public void ActiveCollider()
+    {
+        ccEnemy.enabled = true;
+    }
 
 }
