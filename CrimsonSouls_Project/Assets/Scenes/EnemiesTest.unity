@@ -1069,7 +1069,7 @@ GameObject:
   - component: {fileID: 578301608}
   - component: {fileID: 578301610}
   - component: {fileID: 578301609}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: Player
   m_TagString: PlayerCollider
   m_Icon: {fileID: 0}
@@ -1249,6 +1249,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7909025393268121938, guid: 63f598be67d2dac4c847332a490470be,
+        type: 3}
+      propertyPath: health
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 8880252984447921345, guid: 63f598be67d2dac4c847332a490470be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1990,7 +1995,7 @@ GameObject:
   - component: {fileID: 1223818192}
   - component: {fileID: 1223818193}
   - component: {fileID: 1223818194}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Graphics
   m_TagString: Player
   m_Icon: {fileID: 0}

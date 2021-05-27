@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Play : MonoBehaviour
 {
+    
  public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        StartCoroutine(UIManager.instance.FadeImageToBlack(1));
     }
 }

@@ -21,10 +21,11 @@ public class Enemy2 : MonoBehaviour
     public int health = 560;
     bool checkPosition;
     bool isPersecution;
-    bool isCollisionRight;
-    bool isCollisionLeft;
+    bool isPlayerOnRight;
+    bool isPlayerOnLeft;
+    bool isCollision;
     bool isAttackRange;
-    bool facingRight;
+    public bool facingRight;
     bool isInRange;
     bool isEnemyInFront;
     private void Start()
@@ -72,32 +73,14 @@ public class Enemy2 : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
-        isCollisionRight = Physics2D.OverlapCircle(new Vector2(transform.position.x + 1.5f, transform.position.y), radiusDefend, whatIsPlayerAttack);
-        isCollisionLeft = Physics2D.OverlapCircle(new Vector2(transform.position.x - 1.5f, transform.position.y), radiusDefend, whatIsPlayerAttack);
-        if (facingRight)
-        {
-            CheckRay();
-        }
-        else
-        {
-            CheckRay();
-        }
+        isCollision = Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y), radiusDefend, whatIsPlayerAttack);
+        isPlayerOnRight = Physics2D.Raycast(new Vector2(this.transform.position.x + 1f, transform.position.y), transform.TransformDirection(Vector2.right), 10f, whatIsPlayer);
+        isPlayerOnLeft = Physics2D.Raycast(new Vector2(this.transform.position.x + -1f, transform.position.y), transform.TransformDirection(Vector2.left), 10f, whatIsPlayer);
 
-        if (isCollisionRight && facingRight && !isEnemyInFront)
-        {
-            cc2D.enabled = false;
-            animEnemy2.SetTrigger("Defend");
-            animEnemy2.SetBool("Walk", false);
-            Debug.Log("Defend");
-        }
-        if (isCollisionLeft && !facingRight && !isEnemyInFront)
-        {
-            cc2D.enabled = false;
-            animEnemy2.SetTrigger("Defend");
-            animEnemy2.SetBool("Walk", false);
-            Debug.Log("Defend");
-        }
+        Debug.Log(isPlayerOnLeft);
+        Debug.Log(isPlayerOnRight);
+
+
     }
     public void Persecution()
     {
@@ -170,25 +153,31 @@ public class Enemy2 : MonoBehaviour
     {
         if (other.CompareTag("PlayerAttack"))
         {
-            Debug.Log("Quita vida");
-            animEnemy2.SetTrigger("Hit");
-            timerAttack = Random.Range(timeToAttackMin, timeToAttackMax);
-            health -= GameManager.instance.GetDamageMeleeAttack();
-        }
-    }
-    public void CheckRay()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(this.transform.position, transform.TransformDirection(Vector2.right), out hit, 10f))
-        {
-            if (hit.collider.CompareTag("Player"))
+            if (facingRight && isPlayerOnRight)
             {
-                isEnemyInFront = true;
+                animEnemy2.SetTrigger("Defend");
+                animEnemy2.SetBool("Walk", false);
+                Debug.Log("Defend");
+            }
+            else if (!facingRight && isPlayerOnLeft)
+            {
+                cc2D.enabled = false;
+                animEnemy2.SetTrigger("Defend");
+                animEnemy2.SetBool("Walk", false);
+                Debug.Log("Defend");
             }
             else
             {
-                isEnemyInFront = false;
+                Debug.Log("Quita vida");
+                animEnemy2.SetTrigger("Hit");
+                timerAttack = Random.Range(timeToAttackMin, timeToAttackMax);
+                health -= GameManager.instance.GetDamageMeleeAttack();
             }
         }
+    }
+
+    public void CheckRay()
+    {
+
     }
 }
