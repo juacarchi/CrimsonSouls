@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6896,14 +6896,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6276655245008971798, guid: 2cb29f592e5303b4385f17f60add3e15,
+    type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -9368,7 +9369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.89758, y: -2.430287, z: -11.44}
+  m_LocalPosition: {x: -6.9012184, y: -2.4302847, z: -11.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1197215239}
@@ -9569,7 +9570,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 557919868}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 587269141}
+        m_MethodName: NextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &557919868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9783,6 +9795,7 @@ MonoBehaviour:
   gravity: -10
   checkRadius: 0.5
   checkClimb: 0.5
+  timeBetweenAttack: 0
   climbJumpsLimit: 1
   jumpsLimit: 2
   isGrounded: 0
@@ -9950,6 +9963,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa645376b6e402e458c8e4fae9fd0dbf, type: 3}
+--- !u!114 &587269141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4190464008164894014, guid: fa645376b6e402e458c8e4fae9fd0dbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 587269140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4d9107f9680b4048bca7c3010f108b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &604911706
 GameObject:
   m_ObjectHideFlags: 0
@@ -13042,7 +13067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: -87.099976}
+  m_AnchoredPosition: {x: 0, y: -87.099976}
   m_SizeDelta: {x: 0.00024414062, y: 174.15137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1103419735
@@ -17916,14 +17941,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: bc774336959e43a498f2d7a72b8b2149, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0

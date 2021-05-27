@@ -10,7 +10,7 @@ public class SaveName : MonoBehaviour
    public void SaveNewName (string s)
     {
         numberOfCharacters=s.Length;
-        if(numberOfCharacters>3 && numberOfCharacters < 8)
+        if(numberOfCharacters>3 && numberOfCharacters < 9)
         {
             GameManager.instance.SetNamePlayer(s);
             Debug.Log(s);
