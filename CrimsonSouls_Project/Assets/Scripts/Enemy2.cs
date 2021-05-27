@@ -26,6 +26,7 @@ public class Enemy2 : MonoBehaviour
     bool isAttackRange;
     bool facingRight;
     bool isInRange;
+    bool isEnemyInFront;
     private void Start()
     {
         timeToAttack = Random.Range(timeToAttackMin, timeToAttackMax);
@@ -39,7 +40,7 @@ public class Enemy2 : MonoBehaviour
         isPersecution = Physics2D.OverlapCircle(transform.position, radiusPersecution, whatIsPlayer);
         isAttackRange = Physics2D.OverlapCircle(transform.position, radiusAttack, whatIsPlayer);
 
-      
+
 
         if (isInRange)
         {
@@ -71,20 +72,31 @@ public class Enemy2 : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        
         isCollisionRight = Physics2D.OverlapCircle(new Vector2(transform.position.x + 1.5f, transform.position.y), radiusDefend, whatIsPlayerAttack);
         isCollisionLeft = Physics2D.OverlapCircle(new Vector2(transform.position.x - 1.5f, transform.position.y), radiusDefend, whatIsPlayerAttack);
-
-        if (isCollisionRight && facingRight)
+        if (facingRight)
         {
-            cc2D.enabled = false;
-            animEnemy2.SetTrigger("Defend");
-            animEnemy2.SetBool("Walk", false);
+            CheckRay();
         }
-        if (isCollisionLeft && !facingRight)
+        else
+        {
+            CheckRay();
+        }
+
+        if (isCollisionRight && facingRight && !isEnemyInFront)
         {
             cc2D.enabled = false;
             animEnemy2.SetTrigger("Defend");
             animEnemy2.SetBool("Walk", false);
+            Debug.Log("Defend");
+        }
+        if (isCollisionLeft && !facingRight && !isEnemyInFront)
+        {
+            cc2D.enabled = false;
+            animEnemy2.SetTrigger("Defend");
+            animEnemy2.SetBool("Walk", false);
+            Debug.Log("Defend");
         }
     }
     public void Persecution()
@@ -162,6 +174,21 @@ public class Enemy2 : MonoBehaviour
             animEnemy2.SetTrigger("Hit");
             timerAttack = Random.Range(timeToAttackMin, timeToAttackMax);
             health -= GameManager.instance.GetDamageMeleeAttack();
+        }
+    }
+    public void CheckRay()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(this.transform.position, transform.TransformDirection(Vector2.right), out hit, 10f))
+        {
+            if (hit.collider.CompareTag("Player"))
+            {
+                isEnemyInFront = true;
+            }
+            else
+            {
+                isEnemyInFront = false;
+            }
         }
     }
 }
