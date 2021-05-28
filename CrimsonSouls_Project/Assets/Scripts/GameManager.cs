@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public string namePlayer;
     public static GameManager instance;
     int damageMeleeAttack;
+    int damageFarAttack;
     public float healthMax;
     [HideInInspector]
     public float health;
@@ -21,11 +22,23 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        damageMeleeAttack = 100;
+        
+    }
+    public void SetDamageMeleeAttack(int damageMeleeAttack)
+    {
+        this.damageMeleeAttack = damageMeleeAttack;
     }
     public int GetDamageMeleeAttack()
     {
         return this.damageMeleeAttack;
+    }
+    public void SetDamageFarAttack(int damageFarAttack)
+    {
+        this.damageFarAttack = damageFarAttack;
+    }
+    public int GetDamageFarAttack()
+    {
+        return this.damageFarAttack;
     }
     public void SetNamePlayer(string namePlayer)
     {

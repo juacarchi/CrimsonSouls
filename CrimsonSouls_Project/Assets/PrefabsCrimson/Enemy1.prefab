@@ -175,8 +175,8 @@ MonoBehaviour:
   speed: 1.2
   radiusPersecution: 7
   radiusAttack: 4
-  timeToAttackMin: 1
-  timeToAttackMax: 3
+  timeToAttackMin: 1.7
+  timeToAttackMax: 4
   facingRight: 1
 --- !u!70 &1317842876477172750
 CapsuleCollider2D:

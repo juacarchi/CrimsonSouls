@@ -1,7 +1,127 @@
 fileFormatVersion: 2
 guid: eb0aeddf801713a45a32acfff67a633e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6162859191535432121
+    second: BulletImpact2_0
+  - first:
+      213: 6359123589986380195
+    second: BulletImpact2_1
+  - first:
+      213: 2885662251703929150
+    second: BulletImpact2_2
+  - first:
+      213: 1249843665664649017
+    second: BulletImpact2_3
+  - first:
+      213: -3258514256357521110
+    second: BulletImpact2_4
+  - first:
+      213: -8482408056533915104
+    second: BulletImpact2_5
+  - first:
+      213: -645119525339064580
+    second: BulletImpact2_6
+  - first:
+      213: -2265399638512579133
+    second: BulletImpact2_7
+  - first:
+      213: -990550080722137475
+    second: BulletImpact2_8
+  - first:
+      213: 5547694431628757416
+    second: BulletImpact2_9
+  - first:
+      213: 7452869966530898392
+    second: BulletImpact2_10
+  - first:
+      213: -1991216134633764930
+    second: BulletImpact2_11
+  - first:
+      213: -5634422365780498172
+    second: BulletImpact2_12
+  - first:
+      213: 1298954916693144469
+    second: BulletImpact2_13
+  - first:
+      213: -2502465468221198985
+    second: BulletImpact2_14
+  - first:
+      213: -8747368200188541846
+    second: BulletImpact2_15
+  - first:
+      213: -3327205082879939000
+    second: BulletImpact2_16
+  - first:
+      213: 2366540719130706977
+    second: BulletImpact2_17
+  - first:
+      213: 4711512213728226313
+    second: BulletImpact2_18
+  - first:
+      213: -5948387421639158510
+    second: BulletImpact2_19
+  - first:
+      213: 5331194218116346882
+    second: BulletImpact2_20
+  - first:
+      213: 322698095011441606
+    second: BulletImpact2_21
+  - first:
+      213: 3405038605318582297
+    second: BulletImpact2_22
+  - first:
+      213: -8442961204909657104
+    second: BulletImpact2_23
+  - first:
+      213: 2807109313391078145
+    second: BulletImpact2_24
+  - first:
+      213: 2599923217651041843
+    second: BulletImpact2_25
+  - first:
+      213: 4919485538655324996
+    second: BulletImpact2_26
+  - first:
+      213: -4995147602322174635
+    second: BulletImpact2_27
+  - first:
+      213: -5369126238697297568
+    second: BulletImpact2_28
+  - first:
+      213: -491247388867866075
+    second: BulletImpact2_29
+  - first:
+      213: 2611268029179075181
+    second: BulletImpact2_30
+  - first:
+      213: -6127598118518549230
+    second: BulletImpact2_31
+  - first:
+      213: -5665878161374771489
+    second: BulletImpact2_32
+  - first:
+      213: 563444266200137508
+    second: BulletImpact2_33
+  - first:
+      213: -3234540573338980026
+    second: BulletImpact2_34
+  - first:
+      213: 6002263265844273052
+    second: BulletImpact2_35
+  - first:
+      213: 8850454776871763538
+    second: BulletImpact2_36
+  - first:
+      213: 6018249350110173494
+    second: BulletImpact2_37
+  - first:
+      213: 1984853829664494961
+    second: BulletImpact2_38
+  - first:
+      213: -722658250254264169
+    second: BulletImpact2_39
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +160,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +191,117 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BulletImpact2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e87cfa730297aa0800000000000000
+      internalID: -6162859191535432121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletImpact2_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9e1f78635204850800000000000000
+      internalID: 6359123589986380195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletImpact2_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39019e678eeb0820800000000000000
+      internalID: 2885662251703929150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BulletImpact2_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937a6b42136585110800000000000000
+      internalID: 1249843665664649017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

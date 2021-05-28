@@ -14,6 +14,7 @@ public class Enemy2 : MonoBehaviour
     public float radiusPersecution;
     public float radiusAttack;
     public float radiusDefend;
+    public int damage;
     float timeToAttack;
     float timerAttack;
     public float timeToAttackMin, timeToAttackMax;

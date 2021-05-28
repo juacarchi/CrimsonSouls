@@ -27,13 +27,14 @@ public class Character2DController : MonoBehaviour
     public float checkRadius;
     public float checkClimb;
     public float timeBetweenAttack;
-
+    public float timeHurt;
     float timerBettweenShoot;
     float timerBetweenAttack;
     float dashTime;
     float timerJumping = 0.2f;
     float timerToDash;
     float timerToCombo;
+    float timerHurt;
 
     public int climbJumpsLimit = 7;
     public int jumpsLimit;
@@ -44,6 +45,7 @@ public class Character2DController : MonoBehaviour
     public bool isGrounded;
     public bool isSecondJump;
 
+    bool isHurt;
     bool isCombo;
     bool canShoot;
     public bool facingRight = true;
@@ -52,7 +54,7 @@ public class Character2DController : MonoBehaviour
     bool isJumping;
     bool isCrouch;
     bool canAttack;
-
+    
     bool canMove=true;
 
     private void Awake()
@@ -77,6 +79,7 @@ public class Character2DController : MonoBehaviour
         timerToDash = timeToDash;
         timerToCombo = timeToCombo;
         timerBettweenShoot = timeBetweenShoot;
+        timerHurt = timeHurt;
         canShoot = true;
     }
 
@@ -134,6 +137,18 @@ public class Character2DController : MonoBehaviour
             {
                 canShoot = true;
                 timerBettweenShoot = timeBetweenShoot;
+            }
+        }
+
+        if (isHurt)
+        {
+            canMove = false;
+            timerHurt -= Time.deltaTime;
+            if (timerHurt <= 0)
+            {
+                canMove = true;
+                isHurt = false;
+                timerHurt = timeHurt;
             }
         }
 
@@ -322,6 +337,20 @@ public class Character2DController : MonoBehaviour
         else
         {
             physic2D.friction = 0;
+        }
+    }
+    public void Hurt(int damage)
+    {
+        if (!isDashing)
+        {
+            GameManager.instance.health -= damage;
+            anim.SetTrigger("Hurt");
+            Debug.Log("Recibe daño");
+            isHurt = true;
+        }
+        else
+        {
+            Debug.Log("No recibe daño");
         }
     }
 }

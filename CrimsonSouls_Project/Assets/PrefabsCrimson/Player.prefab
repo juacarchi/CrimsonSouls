@@ -41,7 +41,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.07940817, y: -0.07456601}
@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 368363746857648560}
   - component: {fileID: 368363746857648575}
   - component: {fileID: 368363746857648573}
+  - component: {fileID: 413996814907309829}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -376,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368363746857648561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.44, y: -3.41, z: 0}
+  m_LocalPosition: {x: -8.41, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 368363746413565145}
@@ -423,11 +424,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animCollider: {fileID: 0}
   realCollider2D: {fileID: 0}
+  rb2D: {fileID: 368363746857648575}
   anim: {fileID: 368363746413565127}
   groundCheck: {fileID: 368363746643781890}
   posProyectile: {fileID: 368363746367734441}
   proyectile: {fileID: 9024932235960435700, guid: 9f2ac4a52ed8ff2459aa9e1d6f16e51b,
     type: 3}
+  physic2D: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -446,12 +449,28 @@ MonoBehaviour:
   checkRadius: 0.5
   checkClimb: 0.5
   timeBetweenAttack: 0.4
+  timeHurt: 0.4
   climbJumpsLimit: 1
   jumpsLimit: 2
   isGrounded: 0
   isSecondJump: 0
   facingRight: 1
   isDashing: 0
+--- !u!114 &413996814907309829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368363746857648561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327cf5ca34028f14f97acc4827af5fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAttackMelee: 50
+  damageAttackFar: 20
+  healthPlayer: 3
 --- !u!1 &368363747268210254
 GameObject:
   m_ObjectHideFlags: 0

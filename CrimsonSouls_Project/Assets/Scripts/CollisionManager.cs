@@ -18,6 +18,6 @@ public class CollisionManager : MonoBehaviour
     }
     public void DamageToPlayer(int damage)
     {
-        GameManager.instance.health -= damage;
+        Character2DController.instance.Hurt(damage);
     }
 }

@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class Enemy1 : MonoBehaviour
 {
@@ -10,7 +8,7 @@ public class Enemy1 : MonoBehaviour
     public CapsuleCollider2D ccEnemy;
     public GameObject laser;
     public Transform posBoca;
-    
+
 
     public int health;
     public float speed;
@@ -141,10 +139,10 @@ public class Enemy1 : MonoBehaviour
             animEnemy1.SetTrigger("Attack_01");
             timerAttack = timeToAttack;
             canAttack = false;
-            
+
         }
     }
-    
+
     public void CheckFlip()
     {
         Vector2 posPlayer = Character2DController.instance.transform.position;
@@ -198,9 +196,14 @@ public class Enemy1 : MonoBehaviour
     {
         if (other.CompareTag("PlayerAttack"))
         {
-            
+
             animEnemy1.SetBool("Hit", false);
-            
+            health -= GameManager.instance.GetDamageMeleeAttack();
+        }
+        else if (other.CompareTag("PlayerFarAttack"))
+        {
+            animEnemy1.SetBool("Hit", false);
+            health -= GameManager.instance.GetDamageFarAttack();
         }
     }
     public void DesactiveCollider()

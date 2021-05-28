@@ -20,7 +20,7 @@ public class Laser : MonoBehaviour
     private void Start()
     {
         Destroy(this.gameObject, 2f);
-        lineRenderer=GetComponent<LineRenderer>();
+        lineRenderer = GetComponent<LineRenderer>();
         scaleY = lineRenderer.startWidth;
         Vector2 posPlayer = Character2DController.instance.transform.position;
         if (enemy1.facingRight)
@@ -38,7 +38,11 @@ public class Laser : MonoBehaviour
         {
             Debug.Log("Ha contactado con el láser");
             CollisionManager.instance.DamageToPlayer(3);
-            contact = true;
+            if (!Character2DController.instance.isDashing)
+            {
+                contact = true;
+            }
+
         }
 
     }
@@ -52,21 +56,25 @@ public class Laser : MonoBehaviour
         }
         else
         {
+
             transform.Translate(direction * speed * Time.deltaTime);
             scaleY -= aumentoScale * Time.deltaTime;
             transform.localScale = new Vector2(transform.localScale.x, scaleY);
             Debug.Log("Empequeñece escala");
             lineRenderer.startWidth = scaleY;
             lineRenderer.endWidth = scaleY;
-            
+
             if (scaleY <= 0)
             {
                 Destroy(this.gameObject);
 
             }
-        }
-            
 
-        
+
+
+        }
+
+
+
     }
 }
