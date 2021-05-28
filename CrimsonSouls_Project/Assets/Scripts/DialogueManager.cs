@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
@@ -12,7 +11,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null) 
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
@@ -28,16 +27,16 @@ public class DialogueManager : MonoBehaviour
     //Se pasa una lista de string que será completada en el inspector.
     public void StartDialogue(List<string> d)
     {
-        {
-            dialoguePanel.SetActive(true);
-            myDialogue = d;
-            textDialogue.text = d[0];
-        }
+        Character2DController.instance.SetCanMove(false);
+        dialoguePanel.SetActive(true);
+        myDialogue = d;
+        textDialogue.text = d[0];
     }
     //Este método será llamado normalmente por un botón que llame a este método cuando se pulse
     //O lo llama al tocar alguna tecla, entonces lo llamaríamos desde el GameManager.
     public void NextSentence()
     {
+
         if (i < myDialogue.Count)
         {
             textDialogue.text = myDialogue[i];
@@ -51,6 +50,7 @@ public class DialogueManager : MonoBehaviour
     //Oculta el panel
     public void HideDialogue()
     {
+        Character2DController.instance.SetCanMove(true);
         dialoguePanel.SetActive(false);
     }
 

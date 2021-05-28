@@ -5,12 +5,12 @@ public class Character2DController : MonoBehaviour
     public static Character2DController instance;
     public BoxCollider2D animCollider;
     public BoxCollider2D realCollider2D;
-    Rigidbody2D rb2D;
+    public Rigidbody2D rb2D;
     public Animator anim;
     public Transform groundCheck;
     public Transform posProyectile;
     public GameObject proyectile;
-   
+
     public LayerMask whatIsGround;
     public LayerMask whatIsClimbWall;
 
@@ -33,7 +33,7 @@ public class Character2DController : MonoBehaviour
     float timerJumping = 0.2f;
     float timerToDash;
     float timerToCombo;
-    
+
     public int climbJumpsLimit = 7;
     public int jumpsLimit;
 
@@ -42,7 +42,7 @@ public class Character2DController : MonoBehaviour
 
     public bool isGrounded;
     public bool isSecondJump;
-   
+
     bool isCombo;
     bool canShoot;
     public bool facingRight = true;
@@ -51,8 +51,8 @@ public class Character2DController : MonoBehaviour
     bool isJumping;
     bool isCrouch;
     bool canAttack;
-    
 
+    bool canMove;
 
     private void Awake()
     {
@@ -66,10 +66,11 @@ public class Character2DController : MonoBehaviour
         }
         canAttack = true;
         timerBetweenAttack = timeBetweenAttack;
+
     }
     void Start()
     {
-        rb2D = GetComponent<Rigidbody2D>();
+        
         jumps = jumpsLimit;
         dashTime = startDashTime;
         timerToDash = timeToDash;
@@ -81,7 +82,7 @@ public class Character2DController : MonoBehaviour
 
     void Update()
     {
-        
+
         timerToDash -= Time.deltaTime;
         if (timerToDash <= 0)
         {
@@ -128,99 +129,109 @@ public class Character2DController : MonoBehaviour
         if (!canShoot)
         {
             timerBettweenShoot -= Time.deltaTime;
-            if (timerBettweenShoot<=0)
+            if (timerBettweenShoot <= 0)
             {
                 canShoot = true;
                 timerBettweenShoot = timeBetweenShoot;
             }
         }
 
-
-
-        if (Input.GetButtonDown("Jump") && jumps > 0)
+        if (canMove)
         {
-            isGrounded = false;
-            isJumping = true;
-            Jump();
-            
-        }
-
-        //ATAQUE CERCA
-        if (Input.GetButtonDown("Fire1") && canAttack)
-        {
-            if (jumps == 0)//DOBLE SALTO
+            #region Salto
+            if (Input.GetButtonDown("Jump") && jumps > 0)
             {
-                FlyAttack();
+                isGrounded = false;
+                isJumping = true;
+                Jump();
+
             }
-            else
+            #endregion
+            #region Ataque cercano y CoolDown
+            if (Input.GetButtonDown("Fire1") && canAttack)
             {
-                if (isGrounded)
+                if (jumps == 0)//DOBLE SALTO
                 {
-                    attacks++;
-                    if (attacks == 1)
-                    {
-                        isCombo = true;
-                        canAttack = false;
-                        anim.SetTrigger("Attack_01");
-                        Debug.Log("Ataque1");
-                    }
-                    else if (attacks == 2)
-                    {
-                        canAttack = false;
-                        anim.SetTrigger("Attack_02");
-                        Debug.Log("Ataque2");
-                    }
-                    else if (attacks > 2)
-                    {
-                        canAttack = false;
-                        anim.SetTrigger("Attack_03");
-                        Debug.Log("Ataque3");
-                        attacks = 0;
-                        isCombo = false;
-                        timerToCombo = timeToCombo;
-                    }
+                    FlyAttack();
                 }
-       
-            }
-        }
-        if (!canAttack)
-        {
-            timerBetweenAttack -= Time.deltaTime;
-            if (timerBetweenAttack <= 0)
-            {
-                canAttack = true;
-                timerBetweenAttack = timeBetweenAttack;
-            }
-        }
-        if (Input.GetButtonDown("Fire2")&&canShoot)
-        {
-            AttackAway();
-        }
+                else
+                {
+                    if (isGrounded)
+                    {
+                        attacks++;
+                        if (attacks == 1)
+                        {
+                            isCombo = true;
+                            canAttack = false;
+                            anim.SetTrigger("Attack_01");
+                            Debug.Log("Ataque1");
+                        }
+                        else if (attacks == 2)
+                        {
+                            canAttack = false;
+                            anim.SetTrigger("Attack_02");
+                            Debug.Log("Ataque2");
+                        }
+                        else if (attacks > 2)
+                        {
+                            canAttack = false;
+                            anim.SetTrigger("Attack_03");
+                            Debug.Log("Ataque3");
+                            attacks = 0;
+                            isCombo = false;
+                            timerToCombo = timeToCombo;
+                        }
+                    }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            if (isCrouch)
-            {
-                anim.SetBool("Crouch",false);
-                isCrouch = false;
+                }
             }
-            else
+            if (!canAttack)
             {
-                anim.SetBool("Crouch", true);
-                isCrouch = true;
+                timerBetweenAttack -= Time.deltaTime;
+                if (timerBetweenAttack <= 0)
+                {
+                    canAttack = true;
+                    timerBetweenAttack = timeBetweenAttack;
+                }
             }
-            
+            #endregion
+            #region Ataque Lejano
+            if (Input.GetButtonDown("Fire2") && canShoot)
+            {
+                AttackAway();
+            }
+            #endregion
+            #region Agachar
+            //if (Input.GetKeyDown(KeyCode.LeftControl))
+            //{
+            //    if (isCrouch)
+            //    {
+            //        anim.SetBool("Crouch", false);
+            //        isCrouch = false;
+            //    }
+            //    else
+            //    {
+            //        anim.SetBool("Crouch", true);
+            //        isCrouch = true;
+            //    }
+
+            //}
+            //if (isCrouch)
+            //{
+            //    realCollider2D = animCollider;
+            //}
+            #endregion
+
+            //Llamar a la animación de final de salto en caso de que esté saltando.
+            if (isGrounded)
+            {
+                anim.SetBool("isGrounded", true);
+            }
+            else { anim.SetBool("isGrounded", false); }
         }
-        if (isCrouch)
-        {
-            realCollider2D = animCollider;
-        }
-        if (isGrounded)
-        {
-            anim.SetBool("isGrounded", true);
-        }
-        else { anim.SetBool("isGrounded", false); }
     }
+
+
 
     private void FixedUpdate()
     {
@@ -229,21 +240,25 @@ public class Character2DController : MonoBehaviour
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
             isClimbing = Physics2D.OverlapCircle(groundCheck.position, checkClimb, whatIsClimbWall);
         }
-        float moveInput = Input.GetAxis("Horizontal");
-        anim.SetFloat("Speed", moveInput);
-        if (!isDashing)
+        if (canMove)
         {
-            rb2D.velocity = new Vector2(moveInput * movementSpeed, rb2D.velocity.y);
-        }
+            float moveInput = Input.GetAxis("Horizontal");
+            anim.SetFloat("Speed", moveInput);
+            if (!isDashing)
+            {
+                rb2D.velocity = new Vector2(moveInput * movementSpeed, rb2D.velocity.y);
+            }
 
-        if (!facingRight && moveInput > 0)
-        {
-            Flip();
+            if (!facingRight && moveInput > 0)
+            {
+                Flip();
+            }
+            else if (facingRight && moveInput < 0)
+            {
+                Flip();
+            }
         }
-        else if (facingRight && moveInput < 0)
-        {
-            Flip();
-        }
+       
     }
     void Jump()
     {
@@ -295,6 +310,12 @@ public class Character2DController : MonoBehaviour
     public void ProyectileAttack()
     {
         Instantiate(proyectile, posProyectile.transform.position, Quaternion.identity);
-
+    }
+    public void SetCanMove(bool canMove)
+    {
+        this.canMove = canMove;
+        rb2D.constraints = RigidbodyConstraints2D.FreezePositionX;
+        rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+       
     }
 }

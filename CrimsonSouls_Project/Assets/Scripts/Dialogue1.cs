@@ -7,8 +7,8 @@ public class Dialogue1 : MonoBehaviour
     public List<string> dialogue1;
     void Start()
     {
-        dialogue1.Add("Esta es la primera parte del primer diálogo, mi nombre es: " + GameManager.instance.namePlayer);
-        
+
+        dialogue1.Add("Su nombre es: " + GameManager.instance.namePlayer);
         StartDialogue1();
     }
 
