@@ -10,6 +10,7 @@ public class Character2DController : MonoBehaviour
     public Transform groundCheck;
     public Transform posProyectile;
     public GameObject proyectile;
+    public PhysicsMaterial2D physic2D;
 
     public LayerMask whatIsGround;
     public LayerMask whatIsClimbWall;
@@ -52,7 +53,7 @@ public class Character2DController : MonoBehaviour
     bool isCrouch;
     bool canAttack;
 
-    bool canMove;
+    bool canMove=true;
 
     private void Awake()
     {
@@ -66,7 +67,7 @@ public class Character2DController : MonoBehaviour
         }
         canAttack = true;
         timerBetweenAttack = timeBetweenAttack;
-
+       
     }
     void Start()
     {
@@ -314,8 +315,13 @@ public class Character2DController : MonoBehaviour
     public void SetCanMove(bool canMove)
     {
         this.canMove = canMove;
-        rb2D.constraints = RigidbodyConstraints2D.FreezePositionX;
-        rb2D.constraints = RigidbodyConstraints2D.FreezeRotation;
-       
+        if (canMove)
+        {
+            physic2D.friction = 1;
+        }
+        else
+        {
+            physic2D.friction = 0;
+        }
     }
 }
