@@ -78,8 +78,7 @@ public class Enemy2 : MonoBehaviour
         isPlayerOnRight = Physics2D.Raycast(new Vector2(this.transform.position.x + 1f, transform.position.y), transform.TransformDirection(Vector2.right), 10f, whatIsPlayer);
         isPlayerOnLeft = Physics2D.Raycast(new Vector2(this.transform.position.x + -1f, transform.position.y), transform.TransformDirection(Vector2.left), 10f, whatIsPlayer);
 
-        Debug.Log(isPlayerOnLeft);
-        Debug.Log(isPlayerOnRight);
+        
 
 
     }

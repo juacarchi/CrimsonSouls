@@ -8,10 +8,11 @@ public class Enemy1 : MonoBehaviour
     public CapsuleCollider2D ccEnemy;
     public GameObject laser;
     public Transform posBoca;
-
+    public Transform initialRange;
 
     public int health;
     public float speed;
+    public float radiusRange;
     public float radiusPersecution;
     public float radiusAttack;
     float timeToAttack;
@@ -25,6 +26,7 @@ public class Enemy1 : MonoBehaviour
     bool canAttack;
     public bool facingRight = true;//True Right, false left.
     bool checkPosition;
+    bool isInRange;
 
     private void Start()
     {
@@ -37,36 +39,44 @@ public class Enemy1 : MonoBehaviour
     {
         isPersecution = Physics2D.OverlapCircle(transform.position, radiusPersecution, whatIsPlayer);
         isAttacking = Physics2D.OverlapCircle(transform.position, radiusAttack, whatIsPlayer);
+        isInRange = Physics2D.OverlapCircle(initialRange.position, radiusRange, whatIsPlayer);
+        if (isInRange)
+        {
+            if (isPersecution && !isAttacking)
+            {
+                Persecution();
+            }
+           
+            if (isAttacking)
+            {
+                canAttack = true;
+                animEnemy1.SetTrigger("NotWalk");
+            }
+            if (!isAttacking)
+            {
+                timerAttack = Random.Range(0.3f, 1.2f);
+            }
+            if (canAttack)
+            {
+                Attacking();
+            }
 
-        if (isPersecution && !isAttacking)
-        {
-            Persecution();
-        }
-        if (!isPersecution && !isAttacking)
-        {
-            Patrolling();
-        }
-        if (isAttacking)
-        {
-            canAttack = true;
-            animEnemy1.SetTrigger("NotWalk");
-        }
-        if (!isAttacking)
-        {
-            timerAttack = Random.Range(0.3f, 1.2f);
-        }
-        if (canAttack)
-        {
-            Attacking();
-        }
-
-        if (Character2DController.instance.isDashing)
-        {
-            ccEnemy.enabled = false;
+            if (Character2DController.instance.isDashing)
+            {
+                ccEnemy.enabled = false;
+            }
+            else
+            {
+                ccEnemy.enabled = true;
+            }
         }
         else
         {
-            ccEnemy.enabled = true;
+           
+            if (!isPersecution && !isAttacking)
+            {
+                Patrolling();
+            }
         }
         posBoca.transform.position = new Vector2(transform.position.x, posBoca.position.y);
     }
@@ -180,8 +190,9 @@ public class Enemy1 : MonoBehaviour
 
     public void InstantiateLaser()
     {
-        Instantiate(laser, posBoca.transform.position, Quaternion.identity);
-
+       GameObject laserNew = Instantiate(laser, posBoca.transform.position, Quaternion.identity);
+        Laser laserScript = laserNew.GetComponent<Laser>();
+        laserScript.isRight = facingRight;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -215,5 +226,26 @@ public class Enemy1 : MonoBehaviour
     {
         ccEnemy.enabled = true;
     }
-
+    public void ComeBack()
+    {
+        float step = speed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, new Vector2(initialRange.transform.position.x, transform.position.y), step);
+        if (initialRange.transform.position.x > transform.position.x)
+        {
+            if (transform.localScale.x < 0)
+            {
+                Flip();
+                facingRight = true;
+            }
+        }
+        if (initialRange.transform.position.x < transform.position.x)
+        {
+            if (transform.localScale.x > 0)
+            {
+                Flip();
+                facingRight = false;
+            }
+        }
+        animEnemy1.SetTrigger("Walk");
+    }
 }

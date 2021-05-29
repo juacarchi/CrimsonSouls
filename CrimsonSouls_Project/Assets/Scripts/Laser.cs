@@ -11,7 +11,7 @@ public class Laser : MonoBehaviour
     Vector2 direction;
     public GameObject enemyGO;
     public Enemy1 enemy1;
-
+    public bool isRight;
     private void Awake()
     {
         enemyGO = GameObject.FindGameObjectWithTag("Enemy1");
@@ -23,7 +23,7 @@ public class Laser : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         scaleY = lineRenderer.startWidth;
         Vector2 posPlayer = Character2DController.instance.transform.position;
-        if (enemy1.facingRight)
+        if (isRight)
         {
             direction = Vector2.right;
         }
@@ -41,6 +41,7 @@ public class Laser : MonoBehaviour
             if (!Character2DController.instance.isDashing)
             {
                 contact = true;
+                
             }
 
         }
