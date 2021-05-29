@@ -54,7 +54,7 @@ public class Character2DController : MonoBehaviour
     bool isJumping;
     bool isCrouch;
     bool canAttack;
-    
+    bool hasBaston;
     bool canMove=true;
 
     private void Awake()
@@ -154,90 +154,107 @@ public class Character2DController : MonoBehaviour
 
         if (canMove)
         {
-            #region Salto
-            if (Input.GetButtonDown("Jump") && jumps > 0)
+            if (hasBaston)
             {
-                isGrounded = false;
-                isJumping = true;
-                Jump();
+                #region Salto
+                if (Input.GetButtonDown("Jump") && jumps > 0)
+                {
+                    isGrounded = false;
+                    isJumping = true;
+                    Jump();
 
-            }
-            #endregion
-            #region Ataque cercano y CoolDown
-            if (Input.GetButtonDown("Fire1") && canAttack)
-            {
-                if (jumps == 0)//DOBLE SALTO
-                {
-                    FlyAttack();
                 }
-                else
+                jumpsLimit = 2;
+                #endregion
+                #region Ataque cercano y CoolDown
+                if (Input.GetButtonDown("Fire1") && canAttack)
                 {
-                    if (isGrounded)
+                    if (jumps == 0)//DOBLE SALTO
                     {
-                        attacks++;
-                        if (attacks == 1)
-                        {
-                            isCombo = true;
-                            canAttack = false;
-                            anim.SetTrigger("Attack_01");
-                            Debug.Log("Ataque1");
-                        }
-                        else if (attacks == 2)
-                        {
-                            canAttack = false;
-                            anim.SetTrigger("Attack_02");
-                            Debug.Log("Ataque2");
-                        }
-                        else if (attacks > 2)
-                        {
-                            canAttack = false;
-                            anim.SetTrigger("Attack_03");
-                            Debug.Log("Ataque3");
-                            attacks = 0;
-                            isCombo = false;
-                            timerToCombo = timeToCombo;
-                        }
+                        FlyAttack();
                     }
+                    else
+                    {
+                        if (isGrounded)
+                        {
+                            attacks++;
+                            if (attacks == 1)
+                            {
+                                isCombo = true;
+                                canAttack = false;
+                                anim.SetTrigger("Attack_01");
+                                Debug.Log("Ataque1");
+                            }
+                            else if (attacks == 2)
+                            {
+                                canAttack = false;
+                                anim.SetTrigger("Attack_02");
+                                Debug.Log("Ataque2");
+                            }
+                            else if (attacks > 2)
+                            {
+                                canAttack = false;
+                                anim.SetTrigger("Attack_03");
+                                Debug.Log("Ataque3");
+                                attacks = 0;
+                                isCombo = false;
+                                timerToCombo = timeToCombo;
+                            }
+                        }
 
+                    }
                 }
-            }
-            if (!canAttack)
-            {
-                timerBetweenAttack -= Time.deltaTime;
-                if (timerBetweenAttack <= 0)
+                if (!canAttack)
                 {
-                    canAttack = true;
-                    timerBetweenAttack = timeBetweenAttack;
+                    timerBetweenAttack -= Time.deltaTime;
+                    if (timerBetweenAttack <= 0)
+                    {
+                        canAttack = true;
+                        timerBetweenAttack = timeBetweenAttack;
+                    }
                 }
+                #endregion
+                #region Ataque Lejano
+                if (Input.GetButtonDown("Fire2") && canShoot)
+                {
+                    AttackAway();
+                }
+                #endregion
+                #region Agachar
+                //if (Input.GetKeyDown(KeyCode.LeftControl))
+                //{
+                //    if (isCrouch)
+                //    {
+                //        anim.SetBool("Crouch", false);
+                //        isCrouch = false;
+                //    }
+                //    else
+                //    {
+                //        anim.SetBool("Crouch", true);
+                //        isCrouch = true;
+                //    }
+
+                //}
+                //if (isCrouch)
+                //{
+                //    realCollider2D = animCollider;
+                //}
+                #endregion
+
             }
-            #endregion
-            #region Ataque Lejano
-            if (Input.GetButtonDown("Fire2") && canShoot)
+            else
             {
-                AttackAway();
+                jumpsLimit = 1;
+                #region Salto
+                if (Input.GetButtonDown("Jump") && jumps > 0)
+                {
+                    isGrounded = false;
+                    isJumping = true;
+                    Jump();
+
+                }
+                #endregion
             }
-            #endregion
-            #region Agachar
-            //if (Input.GetKeyDown(KeyCode.LeftControl))
-            //{
-            //    if (isCrouch)
-            //    {
-            //        anim.SetBool("Crouch", false);
-            //        isCrouch = false;
-            //    }
-            //    else
-            //    {
-            //        anim.SetBool("Crouch", true);
-            //        isCrouch = true;
-            //    }
-
-            //}
-            //if (isCrouch)
-            //{
-            //    realCollider2D = animCollider;
-            //}
-            #endregion
-
             //Llamar a la animación de final de salto en caso de que esté saltando.
             if (isGrounded)
             {
@@ -245,6 +262,7 @@ public class Character2DController : MonoBehaviour
             }
             else { anim.SetBool("isGrounded", false); }
         }
+        
     }
 
 
@@ -352,5 +370,9 @@ public class Character2DController : MonoBehaviour
         {
             Debug.Log("No recibe daño");
         }
+    }
+    public void SetHasBaston(bool hasBaston)
+    {
+        this.hasBaston = hasBaston;
     }
 }

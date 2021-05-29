@@ -4,11 +4,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
+    
+    public GameObject panelBaston;
     public Image imageRun;
     public GameObject imageFadeGO;
     public Image imageFade;
     public static UIManager instance;
     bool isFinish;
+    
     private void Awake()
     {
         if (instance == null)
@@ -21,6 +24,7 @@ public class UIManager : MonoBehaviour
             Destroy(this);
         }
         imageRun.enabled = false;
+        panelBaston.SetActive(false);
     }
 
     public IEnumerator FadeImageToBlack(int sceneToLoad)
@@ -62,5 +66,8 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(2);
         Debug.Log("SegundaCorroutine");
     }
-
+    public void ShowBaston(bool showBaston)
+    {
+        panelBaston.SetActive(showBaston);
+    }
 }

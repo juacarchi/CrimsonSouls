@@ -12,6 +12,9 @@ TagManager:
   - PlayerCollider
   - Target
   - PlayerFarAttack
+  - Rata1
+  - Rata2
+  - Rata3
   layers:
   - Default
   - TransparentFX

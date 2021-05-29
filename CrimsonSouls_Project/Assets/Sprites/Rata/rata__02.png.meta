@@ -1,22 +1,7 @@
 fileFormatVersion: 2
-guid: 40c50c3c94502ac4ea22cbc3d0bd0532
+guid: a602b02b72933924299ad002f7d9e23e
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -2268082364828289016
-    second: SplashDrops_0
-  - first:
-      213: -2266565532030766269
-    second: SplashDrops_1
-  - first:
-      213: 3400597515539129192
-    second: SplashDrops_2
-  - first:
-      213: 5718357074067216957
-    second: SplashDrops_0
-  - first:
-      213: -3131767905192718081
-    second: SplashDrops_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,12 +40,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 280
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,49 +97,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: SplashDrops_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 256
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3a5e92367fab5f40800000000000000
-      internalID: 5718357074067216957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SplashDrops_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff0d40cdea9b984d0800000000000000
-      internalID: -3131767905192718081
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
