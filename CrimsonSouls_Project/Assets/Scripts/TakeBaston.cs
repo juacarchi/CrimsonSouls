@@ -16,7 +16,9 @@ public class TakeBaston : MonoBehaviour
     {
         if (Input.GetButtonDown("Take"))
         {
+            GameManager.instance.SetHasBaston(true);
             Character2DController.instance.SetHasBaston(true);
+
             Destroy(baston);
             BoxCollider2D bxCetro = GetComponent<BoxCollider2D>();
             Destroy(bxCetro);

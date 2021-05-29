@@ -81,6 +81,7 @@ public class Character2DController : MonoBehaviour
         timerBettweenShoot = timeBetweenShoot;
         timerHurt = timeHurt;
         canShoot = true;
+        hasBaston = GameManager.instance.GetHasBaston();
     }
 
 
@@ -361,7 +362,7 @@ public class Character2DController : MonoBehaviour
     {
         if (!isDashing)
         {
-            GameManager.instance.health -= damage;
+            GameManager.instance.LoseHealth(1);
             anim.SetTrigger("Hurt");
             Debug.Log("Recibe daño");
             isHurt = true;

@@ -6,11 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public string namePlayer;
     public static GameManager instance;
+    bool hasBaston;
     int damageMeleeAttack;
     int damageFarAttack;
     public float healthMax;
     [HideInInspector]
-    public float health;
+    int health;
     private void Awake()
     {
         if(instance == null)
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        health = 3;
         
     }
     public void SetDamageMeleeAttack(int damageMeleeAttack)
@@ -44,5 +46,26 @@ public class GameManager : MonoBehaviour
     {
         this.namePlayer = namePlayer;
         Debug.Log(namePlayer);
+    }
+    public int GetHealth()
+    {
+        return this.health;
+    }
+    public void SetHealth(int health)
+    {
+        this.health = health;
+    }
+    public void LoseHealth(int health)
+    {
+        this.health -= health;
+        HUDManager.instance.ChangeLifeUI();
+    }
+    public void SetHasBaston(bool hasBaston)
+    {
+        this.hasBaston = hasBaston;
+    }
+    public bool GetHasBaston()
+    {
+        return hasBaston;
     }
 }

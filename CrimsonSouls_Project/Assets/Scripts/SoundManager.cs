@@ -28,8 +28,12 @@ public class SoundManager : MonoBehaviour
         audioSource.Play();
     }
     //Método para modificar volumen
-    public void SetVolume(float volume)
+    public void Mute()
     {
-        audioSource.volume = volume;
+        if (audioSource.mute)
+        {
+            audioSource.mute = false;
+        }
+        else { audioSource.mute = true; }
     }
 }

@@ -9,4 +9,5 @@ public class Play : MonoBehaviour
     {
         StartCoroutine(UIManager.instance.FadeImageToBlack(1));
     }
+ 
 }
