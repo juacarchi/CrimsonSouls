@@ -55,7 +55,7 @@ public class Character2DController : MonoBehaviour
     bool isCrouch;
     bool canAttack;
     bool hasBaston;
-    bool canMove=true;
+    bool canMove = true;
 
     private void Awake()
     {
@@ -69,11 +69,11 @@ public class Character2DController : MonoBehaviour
         }
         canAttack = true;
         timerBetweenAttack = timeBetweenAttack;
-       
+
     }
     void Start()
     {
-        
+
         jumps = jumpsLimit;
         dashTime = startDashTime;
         timerToDash = timeToDash;
@@ -299,7 +299,7 @@ public class Character2DController : MonoBehaviour
                 Flip();
             }
         }
-       
+
     }
     void Jump()
     {
@@ -355,14 +355,7 @@ public class Character2DController : MonoBehaviour
     public void SetCanMove(bool canMove)
     {
         this.canMove = canMove;
-        if (canMove)
-        {
-            physic2D.friction = 1;
-        }
-        else
-        {
-            physic2D.friction = 0;
-        }
+       
     }
     public void Hurt(int damage)
     {
@@ -372,7 +365,7 @@ public class Character2DController : MonoBehaviour
             anim.SetTrigger("Hurt");
             Debug.Log("Recibe daño");
             isHurt = true;
-            
+
         }
         else
         {
@@ -388,6 +381,26 @@ public class Character2DController : MonoBehaviour
         if (other.CompareTag("Pinchos"))
         {
             CollisionManager.instance.DamageToPlayer(GameManager.instance.GetHealth());
+        }
+        if (other.CompareTag("dialogo2"))
+        {
+            Dialogue1.instance.StartDialogue(Dialogue1.instance.dialogue2);
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("dialogo3"))
+        {
+            Dialogue1.instance.StartDialogue(Dialogue1.instance.dialogue3);
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("dialogo4"))
+        {
+            Dialogue1.instance.StartDialogue(Dialogue1.instance.dialogue4);
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("dialogo5"))
+        {
+            Dialogue1.instance.StartDialogue(Dialogue1.instance.dialogue5);
+            Destroy(other.gameObject);
         }
     }
 }

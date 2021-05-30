@@ -30,6 +30,7 @@ public class TakeBaston : MonoBehaviour
             Destroy(baston);
             BoxCollider2D bxCetro = GetComponent<BoxCollider2D>();
             Destroy(bxCetro);
+            Dialogue1.instance.StartDialogue(Dialogue1.instance.dialogue4);
         }
     }
 }

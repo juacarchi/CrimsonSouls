@@ -16,6 +16,10 @@ TagManager:
   - Rata2
   - Rata3
   - Pinchos
+  - dialogo2
+  - dialogo3
+  - dialogo4
+  - dialogo5
   layers:
   - Default
   - TransparentFX

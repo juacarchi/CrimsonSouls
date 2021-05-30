@@ -258,7 +258,8 @@ public class Enemy1 : MonoBehaviour
     }
     public void Death()
     {
-        animEnemy1.SetTrigger("Death");
-        Destroy(this.gameObject, 2f);
+        //animEnemy1.SetTrigger("Death");
+        //Destroy(this.gameObject, 2f);
+        Destroy(this.gameObject);
     }
 }
