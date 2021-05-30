@@ -1,27 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TakeBaston : MonoBehaviour
 {
     public GameObject baston;
+    bool canTake;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             UIManager.instance.ShowBaston(true);
-        }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (Input.GetButtonDown("Take"))
-        {
-            GameManager.instance.SetHasBaston(true);
-            Character2DController.instance.SetHasBaston(true);
-
-            Destroy(baston);
-            BoxCollider2D bxCetro = GetComponent<BoxCollider2D>();
-            Destroy(bxCetro);
+            canTake = true;
         }
     }
 
@@ -30,6 +18,18 @@ public class TakeBaston : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             UIManager.instance.ShowBaston(false);
+            canTake = false;
+        }
+    }
+    private void Update()
+    {
+        if (Input.GetButtonDown("Take") && canTake)
+        {
+            GameManager.instance.SetHasBaston(true);
+            Character2DController.instance.SetHasBaston(true);
+            Destroy(baston);
+            BoxCollider2D bxCetro = GetComponent<BoxCollider2D>();
+            Destroy(bxCetro);
         }
     }
 }

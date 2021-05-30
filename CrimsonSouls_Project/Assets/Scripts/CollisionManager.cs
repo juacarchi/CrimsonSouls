@@ -19,5 +19,6 @@ public class CollisionManager : MonoBehaviour
     public void DamageToPlayer(int damage)
     {
         Character2DController.instance.Hurt(damage);
+        
     }
 }

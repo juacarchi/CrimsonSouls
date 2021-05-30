@@ -33,6 +33,7 @@ public class Enemy1 : MonoBehaviour
         timeToAttack = Random.Range(timeToAttackMin, timeToAttackMax);
         timerAttack = timeToAttack;
         ccEnemy = GetComponent<CapsuleCollider2D>();
+        health = 150;
     }
 
     private void Update()
@@ -79,6 +80,7 @@ public class Enemy1 : MonoBehaviour
             }
         }
         posBoca.transform.position = new Vector2(transform.position.x, posBoca.position.y);
+        
     }
     public void Persecution()
     {
@@ -207,15 +209,21 @@ public class Enemy1 : MonoBehaviour
     {
         if (other.CompareTag("PlayerAttack"))
         {
+            if (health <= 0)
+            {
+                Death();
+            }
+        }
+
+        if (other.CompareTag("PlayerAttack"))
+        {
 
             animEnemy1.SetBool("Hit", false);
             health -= GameManager.instance.GetDamageMeleeAttack();
         }
-        else if (other.CompareTag("PlayerFarAttack"))
-        {
-            animEnemy1.SetBool("Hit", false);
-            health -= GameManager.instance.GetDamageFarAttack();
-        }
+       
+
+
     }
     public void DesactiveCollider()
     {
@@ -247,5 +255,10 @@ public class Enemy1 : MonoBehaviour
             }
         }
         animEnemy1.SetTrigger("Walk");
+    }
+    public void Death()
+    {
+        animEnemy1.SetTrigger("Death");
+        Destroy(this.gameObject, 2f);
     }
 }

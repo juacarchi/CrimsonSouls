@@ -263,7 +263,13 @@ public class Character2DController : MonoBehaviour
             }
             else { anim.SetBool("isGrounded", false); }
         }
-        
+        if (GameManager.instance.GetHealth() <= 0)
+        {
+            canMove = false;
+            rb2D.simulated = false;
+            SpriteRenderer spritePlayer = GetComponentInChildren<SpriteRenderer>();
+            spritePlayer.color = new Color(1, 1, 1, 0);
+        }
     }
 
 
@@ -366,6 +372,7 @@ public class Character2DController : MonoBehaviour
             anim.SetTrigger("Hurt");
             Debug.Log("Recibe daño");
             isHurt = true;
+            
         }
         else
         {
@@ -375,5 +382,12 @@ public class Character2DController : MonoBehaviour
     public void SetHasBaston(bool hasBaston)
     {
         this.hasBaston = hasBaston;
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Pinchos"))
+        {
+            CollisionManager.instance.DamageToPlayer(GameManager.instance.GetHealth());
+        }
     }
 }

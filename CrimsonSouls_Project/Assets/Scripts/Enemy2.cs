@@ -19,7 +19,7 @@ public class Enemy2 : MonoBehaviour
     float timerAttack;
     public float timeToAttackMin, timeToAttackMax;
 
-    public int health = 560;
+    public int health = 25;
     bool checkPosition;
     bool isPersecution;
     bool isPlayerOnRight;
@@ -35,6 +35,7 @@ public class Enemy2 : MonoBehaviour
         timerAttack = timeToAttack;
         cc2D = GetComponent<CapsuleCollider2D>();
         facingRight = true;
+        health = 125;
     }
     private void Update()
     {
@@ -175,9 +176,20 @@ public class Enemy2 : MonoBehaviour
             }
         }
     }
-
-    public void CheckRay()
+    private void OnTriggerExit2D(Collider2D other)
     {
 
+        if (other.CompareTag("PlayerAttack"))
+        {
+            if (health <= 0)
+            {
+                Death();
+            }
+        }
+    }
+    public void Death()
+    {
+        animEnemy2.SetTrigger("Death");
+        Destroy(this.gameObject, 2f);
     }
 }

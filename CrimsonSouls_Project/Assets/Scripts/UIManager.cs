@@ -5,15 +5,15 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 
-    
-
+    public GameObject panelMuerte;
     public GameObject panelBaston;
     public Image imageRun;
     public GameObject imageFadeGO;
     public Image imageFade;
     public static UIManager instance;
     bool isFinish;
-
+    bool checkEnter;
+    float speedFade = 0.5f;
     private void Awake()
     {
         if (instance == null)
@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
         }
         imageRun.enabled = false;
         panelBaston.SetActive(false);
-
+        panelMuerte.SetActive(false);
     }
 
     public IEnumerator FadeImageToBlack(int sceneToLoad)
@@ -45,17 +45,43 @@ public class UIManager : MonoBehaviour
             }
             yield return null;
         }
+        if (GameManager.instance.GetHealth() <= 0)
+        {
+            SetCanvasMuerte(true);
+            checkEnter = true;
+            Debug.Log("CanvasMuerte activado");
+
+        }
         imageFade.color = new Color(0, 0, 0, 1);
         imageRun.color = new Color(1, 1, 1, 1);
-        yield return new WaitForSeconds(3);
-        StartCoroutine("FadeImageToTransparent");
-        SceneManager.LoadScene(sceneToLoad);
-
+        yield return new WaitForSeconds(1.5f);
+        if (GameManager.instance.GetHealth() > 0)
+        {
+            StartCoroutine("FadeImageToTransparent");
+            SceneManager.LoadScene(sceneToLoad);
+        }
+        speedFade = 0.5f;
     }
-    public IEnumerator FadeImageToTransparent()
+
+    private void Update()
     {
 
-        for (float i = 1; i > 0; i -= Time.deltaTime * 0.5f)
+        if (Input.GetKeyDown(KeyCode.K) && checkEnter)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameManager.instance.SetHealth(3);
+            speedFade = 0.5f;
+            checkEnter = false;
+            StartCoroutine("FadeImageToTransparent");
+            
+        }
+
+    }
+
+    public IEnumerator FadeImageToTransparent()
+    {
+        UIManager.instance.SetCanvasMuerte(false);
+        for (float i = 1; i > 0; i -= Time.deltaTime * speedFade)
         {
             imageFade.color = new Color(0, 0, 0, i);
             if (i < 0.5f)
@@ -68,10 +94,14 @@ public class UIManager : MonoBehaviour
         imageRun.color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(2);
         Debug.Log("SegundaCorroutine");
+        speedFade = 0.5f;
     }
     public void ShowBaston(bool showBaston)
     {
         panelBaston.SetActive(showBaston);
     }
-
+    public void SetCanvasMuerte(bool isActive)
+    {
+        panelMuerte.SetActive(isActive);
+    }
 }

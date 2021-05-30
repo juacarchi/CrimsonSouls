@@ -1,20 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public string namePlayer;
     public static GameManager instance;
     bool hasBaston;
-    int damageMeleeAttack;
+    int damageMeleeAttack=25;
     int damageFarAttack;
     public float healthMax;
     [HideInInspector]
     int health;
+
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
@@ -24,7 +23,15 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         health = 3;
-        
+
+    }
+    private void Update()
+    {
+        if (health == 0)
+        {
+            Character2DController.instance.rb2D.simulated = false;
+        }
+       
     }
     public void SetDamageMeleeAttack(int damageMeleeAttack)
     {
@@ -59,6 +66,11 @@ public class GameManager : MonoBehaviour
     {
         this.health -= health;
         HUDManager.instance.ChangeLifeUI();
+        if (this.health <= 0)
+        {
+            StartCoroutine(UIManager.instance.FadeImageToBlack(SceneManager.GetActiveScene().buildIndex));
+
+        }
     }
     public void SetHasBaston(bool hasBaston)
     {
