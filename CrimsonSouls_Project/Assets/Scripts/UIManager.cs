@@ -50,6 +50,7 @@ public class UIManager : MonoBehaviour
             SetCanvasMuerte(true);
             checkEnter = true;
             Debug.Log("CanvasMuerte activado");
+            
 
         }
         imageFade.color = new Color(0, 0, 0, 1);
@@ -92,9 +93,11 @@ public class UIManager : MonoBehaviour
         }
         imageFade.color = new Color(0, 0, 0, 0);
         imageRun.color = new Color(1, 1, 1, 0);
+        HUDManager.instance.ChangeLifeUI();
         yield return new WaitForSeconds(2);
         Debug.Log("SegundaCorroutine");
         speedFade = 0.5f;
+        
     }
     public void ShowBaston(bool showBaston)
     {

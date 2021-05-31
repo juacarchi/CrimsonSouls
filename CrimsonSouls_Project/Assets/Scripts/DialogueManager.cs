@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     {
         i = 1;
         Character2DController.instance.SetCanMove(false);
+        Character2DController.instance.anim.SetFloat("Speed", 0);
         dialoguePanel.SetActive(true);
         myDialogue = d;
         textDialogue.text = d[0];

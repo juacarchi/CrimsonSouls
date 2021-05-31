@@ -57,3 +57,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 1011061023
+    locked: 0
+  - name: Overlay
+    uniqueID: 928118881
+    locked: 0

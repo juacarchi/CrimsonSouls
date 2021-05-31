@@ -82,6 +82,7 @@ public class Character2DController : MonoBehaviour
         timerHurt = timeHurt;
         canShoot = true;
         hasBaston = GameManager.instance.GetHasBaston();
+        anim.SetBool("HasBaston", hasBaston);
     }
 
 
@@ -375,6 +376,7 @@ public class Character2DController : MonoBehaviour
     public void SetHasBaston(bool hasBaston)
     {
         this.hasBaston = hasBaston;
+        anim.SetBool("HasBaston", hasBaston);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
