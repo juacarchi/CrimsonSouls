@@ -2097,7 +2097,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Pulsa ENTER para volver a jugar.
+  m_Text: Pulsa "K" para volver a jugar.
 --- !u!222 &1020849107
 CanvasRenderer:
   m_ObjectHideFlags: 0
