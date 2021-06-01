@@ -14,7 +14,10 @@ public class Menu : MonoBehaviour
     }
     public void Return()
     {
-        canvasName.SetActive(false);
+        if (canvasName != null)
+        {
+            canvasName.SetActive(false);
+        }
         canvasOpciones.SetActive(false);
         canvasCreditos.SetActive(false);
     }

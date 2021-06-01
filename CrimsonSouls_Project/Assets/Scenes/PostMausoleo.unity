@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13637,6 +13637,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cc8c09f4fee6f349bb16124f290d7f7, type: 3}
+--- !u!1 &1154949346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 606138702671083381, guid: 3cc8c09f4fee6f349bb16124f290d7f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1154949345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1154949347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154949346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b533e975d575147a4466c7f497c28e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1166640680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19439,6 +19457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1891976466}
   - component: {fileID: 1891976465}
+  - component: {fileID: 1891976467}
   m_Layer: 0
   m_Name: Mausoleo_roto
   m_TagString: Untagged
@@ -19510,6 +19529,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1891976467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891976464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119ced597655c8e46a2bad7a2fd57451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1907842015
 GameObject:
   m_ObjectHideFlags: 0
@@ -20898,12 +20929,12 @@ PrefabInstance:
     - target: {fileID: 1584669008366777471, guid: 282f9ac0829782a45a1fa0953d223f0a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.5705423
+      value: -6.9012184
       objectReference: {fileID: 0}
     - target: {fileID: 1584669008366777471, guid: 282f9ac0829782a45a1fa0953d223f0a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4305139
+      value: -2.4302847
       objectReference: {fileID: 0}
     - target: {fileID: 1584669008366777471, guid: 282f9ac0829782a45a1fa0953d223f0a,
         type: 3}

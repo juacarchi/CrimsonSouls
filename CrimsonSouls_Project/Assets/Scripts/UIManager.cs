@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 
+    public GameObject canvasPause;
     public GameObject panelMuerte;
     public GameObject panelBaston;
     public Image imageRun;
@@ -13,6 +14,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
     bool isFinish;
     bool checkEnter;
+    bool isPause;
     float speedFade = 0.5f;
     private void Awake()
     {
@@ -28,6 +30,8 @@ public class UIManager : MonoBehaviour
         imageRun.enabled = false;
         panelBaston.SetActive(false);
         panelMuerte.SetActive(false);
+        canvasPause.SetActive(false);
+        isPause = false;
     }
 
     public IEnumerator FadeImageToBlack(int sceneToLoad)
@@ -37,6 +41,7 @@ public class UIManager : MonoBehaviour
 
         for (float i = 0; i < 1; i += Time.deltaTime * 0.5f)
         {
+            SoundManager.instance.audioSource.volume = 1- i;
             imageFade.color = new Color(0, 0, 0, i);
             if (i > 0.5f)
             {
@@ -76,7 +81,26 @@ public class UIManager : MonoBehaviour
             StartCoroutine("FadeImageToTransparent");
             
         }
-
+        if (SceneManager.GetActiveScene().buildIndex > 0)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (!isPause)
+                {
+                    isPause = true;
+                    SetCanvasPause(isPause);
+                    Character2DController.instance.SetCanMove(false);
+                    Character2DController.instance.anim.SetFloat("Speed", 0);
+                    Time.timeScale=0;
+                }
+                else
+                {
+                    isPause = false;
+                    SetCanvasPause(isPause);
+                    Character2DController.instance.SetCanMove(true);
+                }
+            }
+        }
     }
 
     public IEnumerator FadeImageToTransparent()
@@ -84,6 +108,7 @@ public class UIManager : MonoBehaviour
         UIManager.instance.SetCanvasMuerte(false);
         for (float i = 1; i > 0; i -= Time.deltaTime * speedFade)
         {
+            SoundManager.instance.audioSource.volume = 1 - i;
             imageFade.color = new Color(0, 0, 0, i);
             if (i < 0.5f)
             {
@@ -107,4 +132,9 @@ public class UIManager : MonoBehaviour
     {
         panelMuerte.SetActive(isActive);
     }
+    public void SetCanvasPause(bool isPause)
+    {
+        canvasPause.SetActive(isPause);
+    }
+
 }

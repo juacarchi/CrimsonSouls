@@ -5,6 +5,8 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     //Declarar variable estática singleton
+    public AudioClip audioMausoleo;
+    public AudioClip audioPostMausoleo;
     public static SoundManager instance;
     public AudioSource audioSource;
     //Aqui podemos meter una serie de AudioClip para poder llamarlos desde otros elementos.
